@@ -1,0 +1,745 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "RERPAPI",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/Employee/getall": {
+      "get": {
+        "tags": [
+          "Employee"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Employee/getemployees": {
+      "get": {
+        "tags": [
+          "Employee"
+        ],
+        "parameters": [
+          {
+            "name": "status",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "departmentID",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "keyword",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Employee/getbyid": {
+      "get": {
+        "tags": [
+          "Employee"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Employee/savedata": {
+      "post": {
+        "tags": [
+          "Employee"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Employee"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Employee"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Employee"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Menu/getall": {
+      "get": {
+        "tags": [
+          "Menu"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Values/employee": {
+      "get": {
+        "tags": [
+          "Values"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Employee": {
+        "type": "object",
+        "properties": {
+          "ID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "UserID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "Code": {
+            "type": "string",
+            "nullable": true
+          },
+          "FullName": {
+            "type": "string",
+            "nullable": true
+          },
+          "BirthOfDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "Sex": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "Qualifications": {
+            "type": "string",
+            "nullable": true
+          },
+          "BankAccount": {
+            "type": "string",
+            "nullable": true
+          },
+          "BHYT": {
+            "type": "string",
+            "nullable": true
+          },
+          "MST": {
+            "type": "string",
+            "nullable": true
+          },
+          "BHXH": {
+            "type": "string",
+            "nullable": true
+          },
+          "CMTND": {
+            "type": "string",
+            "nullable": true
+          },
+          "JobDescription": {
+            "type": "string",
+            "nullable": true
+          },
+          "NhanVienTuVan": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "Telephone": {
+            "type": "string",
+            "nullable": true
+          },
+          "HandPhone": {
+            "type": "string",
+            "nullable": true
+          },
+          "HomeAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "Resident": {
+            "type": "string",
+            "nullable": true
+          },
+          "PostalCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "DepartmentID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "Status": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "Communication": {
+            "type": "string",
+            "nullable": true
+          },
+          "PassExpireDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "IsCashier": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "CashierNo": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "EmailCom": {
+            "type": "string",
+            "nullable": true
+          },
+          "Email": {
+            "type": "string",
+            "nullable": true
+          },
+          "StartWorking": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "UserGroupID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "UserGroupSXID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "MainViewID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "Position": {
+            "type": "string",
+            "nullable": true
+          },
+          "IsSetupFunction": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "ImagePath": {
+            "type": "string",
+            "nullable": true
+          },
+          "CreatedBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "CreatedDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "UpdatedBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "UpdatedDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "isAdminSale": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "RoleID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "TeamID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "Leader": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "IDChamCongCu": {
+            "type": "string",
+            "nullable": true
+          },
+          "IDChamCongMoi": {
+            "type": "string",
+            "nullable": true
+          },
+          "AnhCBNV": {
+            "type": "string",
+            "nullable": true
+          },
+          "ChucVuHDID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "ChuVuID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "DvBHXH": {
+            "type": "string",
+            "nullable": true
+          },
+          "DiaDiemLamViec": {
+            "type": "string",
+            "nullable": true
+          },
+          "NoiSinh": {
+            "type": "string",
+            "nullable": true
+          },
+          "GioiTinh": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "DanToc": {
+            "type": "string",
+            "nullable": true
+          },
+          "TonGiao": {
+            "type": "string",
+            "nullable": true
+          },
+          "QuocTich": {
+            "type": "string",
+            "nullable": true
+          },
+          "TinhTrangHonNhanID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "SoCMTND": {
+            "type": "string",
+            "nullable": true
+          },
+          "NgayCap": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "NoiCap": {
+            "type": "string",
+            "nullable": true
+          },
+          "DcThuongTru": {
+            "type": "string",
+            "nullable": true
+          },
+          "DcTamTru": {
+            "type": "string",
+            "nullable": true
+          },
+          "SDTCaNhan": {
+            "type": "string",
+            "nullable": true
+          },
+          "EmailCaNhan": {
+            "type": "string",
+            "nullable": true
+          },
+          "SDTCongTy": {
+            "type": "string",
+            "nullable": true
+          },
+          "EmailCongTy": {
+            "type": "string",
+            "nullable": true
+          },
+          "NguoiLienHeKhiCan": {
+            "type": "string",
+            "nullable": true
+          },
+          "MoiQuanHe": {
+            "type": "string",
+            "nullable": true
+          },
+          "SDTNguoiThan": {
+            "type": "string",
+            "nullable": true
+          },
+          "LoaiHDLDID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "TinhTrangKyHD": {
+            "type": "string",
+            "nullable": true
+          },
+          "NgayBatDauHD": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "NgayKetThucHD": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "SoHD": {
+            "type": "string",
+            "nullable": true
+          },
+          "SoSoBHXH": {
+            "type": "string",
+            "nullable": true
+          },
+          "NguoiGiuSoBHXH": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "NgayBatDauBHXHCty": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "MucDongBHXHHienTai": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "LuongThuViec": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "LuongCoBan": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "AnCa": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "XangXe": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "DienThoai": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "NhaO": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "TrangPhuc": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "ChuyenCan": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "Khac": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "TongPhuCap": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "TongLuong": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "GiamTruBanThan": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "SoNguoiPT": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "TongTien": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "STKChuyenLuong": {
+            "type": "string",
+            "nullable": true
+          },
+          "SYLL": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "GiayKS": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "CMNDorCCCD": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "SoHK": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "XNNS": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "BangCap": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "CV": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "DXV": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "CamKetTs": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "ToTrinhTD": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "ThuMoiNhanViec": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "QDTD": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "HDTV": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "DGTV": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "HDLDXDTH": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "DGChuyenHD": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "HDLDKXDTH": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "TinhTrangCapDongPhuc": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "GiayKSK": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "NgayBatDauThuViec": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "NgayKetThucThuViec": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "SoHDTV": {
+            "type": "string",
+            "nullable": true
+          },
+          "NgayBatDauHDXDTH": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "NgayKetThucHDXDTH": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "SoHDXDTH": {
+            "type": "string",
+            "nullable": true
+          },
+          "NgayHieuLucHDKXDTH": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "SoHDKXDTH": {
+            "type": "string",
+            "nullable": true
+          },
+          "NgayBatDauBHXH": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "NgayKetThucBHXH": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "SoNhaDcThuongTru": {
+            "type": "string",
+            "nullable": true
+          },
+          "DuongDcThuongTru": {
+            "type": "string",
+            "nullable": true
+          },
+          "PhuongDcThuongTru": {
+            "type": "string",
+            "nullable": true
+          },
+          "QuanDcThuongTru": {
+            "type": "string",
+            "nullable": true
+          },
+          "TinhDcThuongTru": {
+            "type": "string",
+            "nullable": true
+          },
+          "SoNhaDcTamTru": {
+            "type": "string",
+            "nullable": true
+          },
+          "DuongDcTamTru": {
+            "type": "string",
+            "nullable": true
+          },
+          "PhuongDcTamTru": {
+            "type": "string",
+            "nullable": true
+          },
+          "QuanDcTamTru": {
+            "type": "string",
+            "nullable": true
+          },
+          "TinhDcTamTru": {
+            "type": "string",
+            "nullable": true
+          },
+          "HDLDXDTHYear": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "DGChuyenHDYear": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "EndWorking": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "ReasonDeleted": {
+            "type": "string",
+            "nullable": true
+          },
+          "CodeOld": {
+            "type": "string",
+            "nullable": true
+          },
+          "ProjectTypeID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "EmployeeTeamID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

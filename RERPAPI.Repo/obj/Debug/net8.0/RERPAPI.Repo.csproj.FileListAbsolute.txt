@@ -1,0 +1,17 @@
+D:\LeTheAnh\RTC\Project\2025\SourceCode\RTC.25.008\Backend\RERPAPI\RERPAPI.Repo\bin\Debug\net8.0\RERPAPI.Repo.deps.json
+D:\LeTheAnh\RTC\Project\2025\SourceCode\RTC.25.008\Backend\RERPAPI\RERPAPI.Repo\bin\Debug\net8.0\RERPAPI.Repo.dll
+D:\LeTheAnh\RTC\Project\2025\SourceCode\RTC.25.008\Backend\RERPAPI\RERPAPI.Repo\bin\Debug\net8.0\RERPAPI.Repo.pdb
+D:\LeTheAnh\RTC\Project\2025\SourceCode\RTC.25.008\Backend\RERPAPI\RERPAPI.Repo\obj\Debug\net8.0\RERPAPI.Repo.GeneratedMSBuildEditorConfig.editorconfig
+D:\LeTheAnh\RTC\Project\2025\SourceCode\RTC.25.008\Backend\RERPAPI\RERPAPI.Repo\obj\Debug\net8.0\RERPAPI.Repo.AssemblyInfoInputs.cache
+D:\LeTheAnh\RTC\Project\2025\SourceCode\RTC.25.008\Backend\RERPAPI\RERPAPI.Repo\obj\Debug\net8.0\RERPAPI.Repo.AssemblyInfo.cs
+D:\LeTheAnh\RTC\Project\2025\SourceCode\RTC.25.008\Backend\RERPAPI\RERPAPI.Repo\obj\Debug\net8.0\RERPAPI.Repo.csproj.CoreCompileInputs.cache
+D:\LeTheAnh\RTC\Project\2025\SourceCode\RTC.25.008\Backend\RERPAPI\RERPAPI.Repo\obj\Debug\net8.0\RERPAPI.Repo.dll
+D:\LeTheAnh\RTC\Project\2025\SourceCode\RTC.25.008\Backend\RERPAPI\RERPAPI.Repo\obj\Debug\net8.0\refint\RERPAPI.Repo.dll
+D:\LeTheAnh\RTC\Project\2025\SourceCode\RTC.25.008\Backend\RERPAPI\RERPAPI.Repo\obj\Debug\net8.0\RERPAPI.Repo.pdb
+D:\LeTheAnh\RTC\Project\2025\SourceCode\RTC.25.008\Backend\RERPAPI\RERPAPI.Repo\obj\Debug\net8.0\ref\RERPAPI.Repo.dll
+D:\LeTheAnh\RTC\Project\2025\SourceCode\RTC.25.008\BackEnd\RERPAPI\RERPAPI.Repo\bin\Debug\net8.0\RERPAPI.IRepo.dll
+D:\LeTheAnh\RTC\Project\2025\SourceCode\RTC.25.008\BackEnd\RERPAPI\RERPAPI.Repo\bin\Debug\net8.0\RERPAPI.Model.dll
+D:\LeTheAnh\RTC\Project\2025\SourceCode\RTC.25.008\BackEnd\RERPAPI\RERPAPI.Repo\bin\Debug\net8.0\RERPAPI.IRepo.pdb
+D:\LeTheAnh\RTC\Project\2025\SourceCode\RTC.25.008\BackEnd\RERPAPI\RERPAPI.Repo\bin\Debug\net8.0\RERPAPI.Model.pdb
+D:\LeTheAnh\RTC\Project\2025\SourceCode\RTC.25.008\BackEnd\RERPAPI\RERPAPI.Repo\obj\Debug\net8.0\RERPAPI.Repo.csproj.AssemblyReference.cache
+D:\LeTheAnh\RTC\Project\2025\SourceCode\RTC.25.008\BackEnd\RERPAPI\RERPAPI.Repo\obj\Debug\net8.0\RERPAPI..AC772A50.Up2Date
