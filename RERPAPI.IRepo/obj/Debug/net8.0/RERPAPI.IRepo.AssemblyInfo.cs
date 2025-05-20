@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RERPAPI.IRepo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+417045536431668f0c45bf13ea69e5d6bb50c78b")]
 [assembly: System.Reflection.AssemblyProductAttribute("RERPAPI.IRepo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RERPAPI.IRepo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
