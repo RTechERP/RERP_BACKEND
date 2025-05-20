@@ -1,0 +1,278 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\RTC_Trani\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{72ECC339-9026-4FA8-9B21-77D4A58A9C24}|RERPAPI\\RERPAPI.csproj|d:\\rtc_trani\\rerpapi\\rerpapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{72ECC339-9026-4FA8-9B21-77D4A58A9C24}|RERPAPI\\RERPAPI.csproj|solutionrelative:rerpapi\\rerpapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A04939C-512C-44E4-9E21-A1D956E059E8}|RERPAPI.Repo\\RERPAPI.Repo.csproj|d:\\rtc_trani\\rerpapi.repo\\genericentity\\officesupplyunitrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A04939C-512C-44E4-9E21-A1D956E059E8}|RERPAPI.Repo\\RERPAPI.Repo.csproj|solutionrelative:rerpapi.repo\\genericentity\\officesupplyunitrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A04939C-512C-44E4-9E21-A1D956E059E8}|RERPAPI.Repo\\RERPAPI.Repo.csproj|D:\\RTC_Trani\\rerpapi.repo\\genericentity\\officesuppliesrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A04939C-512C-44E4-9E21-A1D956E059E8}|RERPAPI.Repo\\RERPAPI.Repo.csproj|solutionrelative:rerpapi.repo\\genericentity\\officesuppliesrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F82A2884-AB17-428B-BBAC-AA6A4B5BA11E}|RERPAPI.Model\\RERPAPI.Model.csproj|D:\\RTC_Trani\\rerpapi.model\\common\\sqlhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F82A2884-AB17-428B-BBAC-AA6A4B5BA11E}|RERPAPI.Model\\RERPAPI.Model.csproj|solutionrelative:rerpapi.model\\common\\sqlhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F82A2884-AB17-428B-BBAC-AA6A4B5BA11E}|RERPAPI.Model\\RERPAPI.Model.csproj|D:\\RTC_Trani\\rerpapi.model\\common\\config.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F82A2884-AB17-428B-BBAC-AA6A4B5BA11E}|RERPAPI.Model\\RERPAPI.Model.csproj|solutionrelative:rerpapi.model\\common\\config.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72ECC339-9026-4FA8-9B21-77D4A58A9C24}|RERPAPI\\RERPAPI.csproj|D:\\RTC_Trani\\rerpapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72ECC339-9026-4FA8-9B21-77D4A58A9C24}|RERPAPI\\RERPAPI.csproj|solutionrelative:rerpapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72ECC339-9026-4FA8-9B21-77D4A58A9C24}|RERPAPI\\RERPAPI.csproj|D:\\RTC_Trani\\rerpapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{72ECC339-9026-4FA8-9B21-77D4A58A9C24}|RERPAPI\\RERPAPI.csproj|solutionrelative:rerpapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72ECC339-9026-4FA8-9B21-77D4A58A9C24}|RERPAPI\\RERPAPI.csproj|D:\\RTC_Trani\\rerpapi\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72ECC339-9026-4FA8-9B21-77D4A58A9C24}|RERPAPI\\RERPAPI.csproj|solutionrelative:rerpapi\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F82A2884-AB17-428B-BBAC-AA6A4B5BA11E}|RERPAPI.Model\\RERPAPI.Model.csproj|D:\\RTC_Trani\\rerpapi.model\\entities\\dailyreporthr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F82A2884-AB17-428B-BBAC-AA6A4B5BA11E}|RERPAPI.Model\\RERPAPI.Model.csproj|solutionrelative:rerpapi.model\\entities\\dailyreporthr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F82A2884-AB17-428B-BBAC-AA6A4B5BA11E}|RERPAPI.Model\\RERPAPI.Model.csproj|D:\\RTC_Trani\\rerpapi.model\\dto\\employeedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F82A2884-AB17-428B-BBAC-AA6A4B5BA11E}|RERPAPI.Model\\RERPAPI.Model.csproj|solutionrelative:rerpapi.model\\dto\\employeedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A04939C-512C-44E4-9E21-A1D956E059E8}|RERPAPI.Repo\\RERPAPI.Repo.csproj|D:\\RTC_Trani\\rerpapi.repo\\genericrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A04939C-512C-44E4-9E21-A1D956E059E8}|RERPAPI.Repo\\RERPAPI.Repo.csproj|solutionrelative:rerpapi.repo\\genericrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A04939C-512C-44E4-9E21-A1D956E059E8}|RERPAPI.Repo\\RERPAPI.Repo.csproj|D:\\RTC_Trani\\rerpapi.repo\\genericentity\\employeerepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A04939C-512C-44E4-9E21-A1D956E059E8}|RERPAPI.Repo\\RERPAPI.Repo.csproj|solutionrelative:rerpapi.repo\\genericentity\\employeerepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72ECC339-9026-4FA8-9B21-77D4A58A9C24}|RERPAPI\\RERPAPI.csproj|D:\\RTC_Trani\\rerpapi\\controllers\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72ECC339-9026-4FA8-9B21-77D4A58A9C24}|RERPAPI\\RERPAPI.csproj|solutionrelative:rerpapi\\controllers\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F82A2884-AB17-428B-BBAC-AA6A4B5BA11E}|RERPAPI.Model\\RERPAPI.Model.csproj|D:\\RTC_Trani\\rerpapi.model\\entities\\officesupplyunit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F82A2884-AB17-428B-BBAC-AA6A4B5BA11E}|RERPAPI.Model\\RERPAPI.Model.csproj|solutionrelative:rerpapi.model\\entities\\officesupplyunit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F82A2884-AB17-428B-BBAC-AA6A4B5BA11E}|RERPAPI.Model\\RERPAPI.Model.csproj|D:\\RTC_Trani\\rerpapi.model\\entities\\officesupply.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F82A2884-AB17-428B-BBAC-AA6A4B5BA11E}|RERPAPI.Model\\RERPAPI.Model.csproj|solutionrelative:rerpapi.model\\entities\\officesupply.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RERPAPI",
+              "DocumentMoniker": "D:\\RTC_Trani\\RERPAPI\\RERPAPI.csproj",
+              "RelativeDocumentMoniker": "RERPAPI\\RERPAPI.csproj",
+              "ToolTip": "D:\\RTC_Trani\\RERPAPI\\RERPAPI.csproj",
+              "RelativeToolTip": "RERPAPI\\RERPAPI.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-05-20T17:27:34.47Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OfficeSuppliesRepo.cs",
+              "DocumentMoniker": "D:\\RTC_Trani\\RERPAPI.Repo\\GenericEntity\\OfficeSuppliesRepo.cs",
+              "RelativeDocumentMoniker": "RERPAPI.Repo\\GenericEntity\\OfficeSuppliesRepo.cs",
+              "ToolTip": "D:\\RTC_Trani\\RERPAPI.Repo\\GenericEntity\\OfficeSuppliesRepo.cs",
+              "RelativeToolTip": "RERPAPI.Repo\\GenericEntity\\OfficeSuppliesRepo.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA0AAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T09:05:01.646Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OfficeSupplyUnitRepo.cs",
+              "DocumentMoniker": "D:\\RTC_Trani\\RERPAPI.Repo\\GenericEntity\\OfficeSupplyUnitRepo.cs",
+              "RelativeDocumentMoniker": "RERPAPI.Repo\\GenericEntity\\OfficeSupplyUnitRepo.cs",
+              "ToolTip": "D:\\RTC_Trani\\RERPAPI.Repo\\GenericEntity\\OfficeSupplyUnitRepo.cs",
+              "RelativeToolTip": "RERPAPI.Repo\\GenericEntity\\OfficeSupplyUnitRepo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T09:04:47.873Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\RTC_Trani\\RERPAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "RERPAPI\\appsettings.json",
+              "ToolTip": "D:\\RTC_Trani\\RERPAPI\\appsettings.json",
+              "RelativeToolTip": "RERPAPI\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-20T09:00:43.412Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DailyReportHR.cs",
+              "DocumentMoniker": "D:\\RTC_Trani\\RERPAPI.Model\\Entities\\DailyReportHR.cs",
+              "RelativeDocumentMoniker": "RERPAPI.Model\\Entities\\DailyReportHR.cs",
+              "ToolTip": "D:\\RTC_Trani\\RERPAPI.Model\\Entities\\DailyReportHR.cs",
+              "RelativeToolTip": "RERPAPI.Model\\Entities\\DailyReportHR.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAYwCEAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T02:45:26.775Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EmployeeController.cs",
+              "DocumentMoniker": "D:\\RTC_Trani\\RERPAPI\\Controllers\\EmployeeController.cs",
+              "RelativeDocumentMoniker": "RERPAPI\\Controllers\\EmployeeController.cs",
+              "ToolTip": "D:\\RTC_Trani\\RERPAPI\\Controllers\\EmployeeController.cs",
+              "RelativeToolTip": "RERPAPI\\Controllers\\EmployeeController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABEAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T01:29:47.432Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\RTC_Trani\\RERPAPI\\Program.cs",
+              "RelativeDocumentMoniker": "RERPAPI\\Program.cs",
+              "ToolTip": "D:\\RTC_Trani\\RERPAPI\\Program.cs",
+              "RelativeToolTip": "RERPAPI\\Program.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA8AAABVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T01:11:14.543Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Config.cs",
+              "DocumentMoniker": "D:\\RTC_Trani\\RERPAPI.Model\\Common\\Config.cs",
+              "RelativeDocumentMoniker": "RERPAPI.Model\\Common\\Config.cs",
+              "ToolTip": "D:\\RTC_Trani\\RERPAPI.Model\\Common\\Config.cs",
+              "RelativeToolTip": "RERPAPI.Model\\Common\\Config.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T01:11:19.42Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SQLHelper.cs",
+              "DocumentMoniker": "D:\\RTC_Trani\\RERPAPI.Model\\Common\\SQLHelper.cs",
+              "RelativeDocumentMoniker": "RERPAPI.Model\\Common\\SQLHelper.cs",
+              "ToolTip": "D:\\RTC_Trani\\RERPAPI.Model\\Common\\SQLHelper.cs",
+              "RelativeToolTip": "RERPAPI.Model\\Common\\SQLHelper.cs",
+              "ViewState": "AQIAAEgAAAAAAAAAAADwv2YAAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T01:30:01.454Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "GenericRepo.cs",
+              "DocumentMoniker": "D:\\RTC_Trani\\RERPAPI.Repo\\GenericRepo.cs",
+              "RelativeDocumentMoniker": "RERPAPI.Repo\\GenericRepo.cs",
+              "ToolTip": "D:\\RTC_Trani\\RERPAPI.Repo\\GenericRepo.cs",
+              "RelativeToolTip": "RERPAPI.Repo\\GenericRepo.cs",
+              "ViewState": "AQIAAKoAAAAAAAAAAAAmwAsAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T04:26:02.499Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "EmployeeDTO.cs",
+              "DocumentMoniker": "D:\\RTC_Trani\\RERPAPI.Model\\DTO\\EmployeeDTO.cs",
+              "RelativeDocumentMoniker": "RERPAPI.Model\\DTO\\EmployeeDTO.cs",
+              "ToolTip": "D:\\RTC_Trani\\RERPAPI.Model\\DTO\\EmployeeDTO.cs",
+              "RelativeToolTip": "RERPAPI.Model\\DTO\\EmployeeDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T10:28:44.583Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MenuController.cs",
+              "DocumentMoniker": "D:\\RTC_Trani\\RERPAPI\\Controllers\\MenuController.cs",
+              "RelativeDocumentMoniker": "RERPAPI\\Controllers\\MenuController.cs",
+              "ToolTip": "D:\\RTC_Trani\\RERPAPI\\Controllers\\MenuController.cs",
+              "RelativeToolTip": "RERPAPI\\Controllers\\MenuController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T10:23:40.881Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "OfficeSupply.cs",
+              "DocumentMoniker": "D:\\RTC_Trani\\RERPAPI.Model\\Entities\\OfficeSupply.cs",
+              "RelativeDocumentMoniker": "RERPAPI.Model\\Entities\\OfficeSupply.cs",
+              "ToolTip": "D:\\RTC_Trani\\RERPAPI.Model\\Entities\\OfficeSupply.cs",
+              "RelativeToolTip": "RERPAPI.Model\\Entities\\OfficeSupply.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAUAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T02:45:06.061Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "EmployeeRepo.cs",
+              "DocumentMoniker": "D:\\RTC_Trani\\RERPAPI.Repo\\GenericEntity\\EmployeeRepo.cs",
+              "RelativeDocumentMoniker": "RERPAPI.Repo\\GenericEntity\\EmployeeRepo.cs",
+              "ToolTip": "D:\\RTC_Trani\\RERPAPI.Repo\\GenericEntity\\EmployeeRepo.cs",
+              "RelativeToolTip": "RERPAPI.Repo\\GenericEntity\\EmployeeRepo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAkAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T02:27:55.877Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "OfficeSupplyUnit.cs",
+              "DocumentMoniker": "D:\\RTC_Trani\\RERPAPI.Model\\Entities\\OfficeSupplyUnit.cs",
+              "RelativeDocumentMoniker": "RERPAPI.Model\\Entities\\OfficeSupplyUnit.cs",
+              "ToolTip": "D:\\RTC_Trani\\RERPAPI.Model\\Entities\\OfficeSupplyUnit.cs",
+              "RelativeToolTip": "RERPAPI.Model\\Entities\\OfficeSupplyUnit.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwAUAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T03:58:04.588Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

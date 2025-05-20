@@ -554,10 +554,7 @@
       },
       "RERPAPI.IRepo/1.0.0": {
         "runtime": {
-          "RERPAPI.IRepo.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "RERPAPI.IRepo.dll": {}
         }
       },
       "RERPAPI.Model/1.0.0": {
@@ -566,10 +563,7 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.0"
         },
         "runtime": {
-          "RERPAPI.Model.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "RERPAPI.Model.dll": {}
         }
       }
     }
