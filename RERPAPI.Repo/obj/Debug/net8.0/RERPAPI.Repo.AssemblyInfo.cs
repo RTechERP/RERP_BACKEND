@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RERPAPI.Repo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+800537b08dcaa4c9913c4fd09a6562169142f117")]
 [assembly: System.Reflection.AssemblyProductAttribute("RERPAPI.Repo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RERPAPI.Repo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
