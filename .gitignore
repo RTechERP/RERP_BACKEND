@@ -5,7 +5,7 @@
 *.userosscache
 *.sln.docstates
 
-# Build
+# Build output
 bin/
 obj/
 *.exe
@@ -18,5 +18,11 @@ obj/
 *.cache
 *.db
 
-# Nếu có file cài đặt tạm
-*.vscode/
+# VS Code settings
+.vscode/
+# ASP.NET secrets
+secrets.json
+
+# Rider / Resharper / JetBrains IDEs
+.idea/
+*.sln.iml

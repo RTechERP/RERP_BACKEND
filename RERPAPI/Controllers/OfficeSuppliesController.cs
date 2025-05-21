@@ -11,14 +11,14 @@ namespace RERPAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class dsVppController : ControllerBase
+    public class OfficeSuppliesController : ControllerBase
     {
       
         private readonly RTCContext _context;
         RTCContext db = new RTCContext();
 
         OfficeSupplyUnitRepo osurepo = new OfficeSupplyUnitRepo();
-        public dsVppController(RTCContext context)
+        public OfficeSuppliesController(RTCContext context)
         {
             _context = context;
         }
