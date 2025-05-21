@@ -1,5 +1,22 @@
-﻿################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
-################################################################################
+﻿# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
 
-/.vs/RERPAPI/FileContentIndex
+# Build
+bin/
+obj/
+*.exe
+*.dll
+*.pdb
+
+# Others
+*.log
+*.bak
+*.cache
+*.db
+
+# Nếu có file cài đặt tạm
+*.vscode/
