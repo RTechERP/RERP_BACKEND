@@ -5,6 +5,426 @@
     "version": "1.0"
   },
   "paths": {
+    "/api/Assets/getallassetsmanagement": {
+      "get": {
+        "tags": [
+          "Assets"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Assets/getall": {
+      "get": {
+        "tags": [
+          "Assets"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Assets/getallreportbroken": {
+      "get": {
+        "tags": [
+          "Assets"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Assets/getstatus": {
+      "get": {
+        "tags": [
+          "Assets"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Assets/getassets": {
+      "get": {
+        "tags": [
+          "Assets"
+        ],
+        "parameters": [
+          {
+            "name": "FilterText",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PageNumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "DateStart",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "DateEnd",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "Status",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Department",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Assets/getallocation": {
+      "get": {
+        "tags": [
+          "Assets"
+        ],
+        "parameters": [
+          {
+            "name": "ID",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Assets/getassetsallocationdetail": {
+      "get": {
+        "tags": [
+          "Assets"
+        ],
+        "parameters": [
+          {
+            "name": "ID",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Assets/gettype": {
+      "get": {
+        "tags": [
+          "Assets"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Assets/getTSAssestAllocation": {
+      "get": {
+        "tags": [
+          "Assets"
+        ],
+        "parameters": [
+          {
+            "name": "dateStart",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "dateEnd",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "employeeID",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterText",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 10
+            }
+          },
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Assets/savedata": {
+      "post": {
+        "tags": [
+          "Assets"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TSAssetManagement"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TSAssetManagement"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TSAssetManagement"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Assets/savedatareportbroken": {
+      "post": {
+        "tags": [
+          "Assets"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReportBrokenFullDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReportBrokenFullDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReportBrokenFullDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Assets/savedatareportlost": {
+      "post": {
+        "tags": [
+          "Assets"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReportLostFullDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReportLostFullDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReportLostFullDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Assets/SaveAllocation": {
+      "post": {
+        "tags": [
+          "Assets"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TSAssetAllocationFullDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TSAssetAllocationFullDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TSAssetAllocationFullDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Assets/generate-allocation-code": {
+      "get": {
+        "tags": [
+          "Assets"
+        ],
+        "parameters": [
+          {
+            "name": "allocationDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Assets/{id}": {
+      "delete": {
+        "tags": [
+          "Assets"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Department/getall": {
+      "get": {
+        "tags": [
+          "Department"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Employee/getall": {
       "get": {
         "tags": [
@@ -46,6 +466,18 @@
               "type": "string"
             }
           }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Employee/get-all-with-details": {
+      "get": {
+        "tags": [
+          "Employee"
         ],
         "responses": {
           "200": {
@@ -112,6 +544,49 @@
         "tags": [
           "Menu"
         ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Unit/getall": {
+      "get": {
+        "tags": [
+          "Unit"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Unit/savedata": {
+      "post": {
+        "tags": [
+          "Unit"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UnitCount"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UnitCount"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UnitCount"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -735,6 +1210,346 @@
           "EmployeeTeamID": {
             "type": "integer",
             "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ReportBrokenFullDto": {
+        "type": "object",
+        "properties": {
+          "AssetID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Note": {
+            "type": "string",
+            "nullable": true
+          },
+          "Status": {
+            "type": "string",
+            "nullable": true
+          },
+          "StatusID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "DateReportBroken": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "Reason": {
+            "type": "string",
+            "nullable": true
+          },
+          "CreatedDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "UpdatedDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "EmployeeID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "DepartmentID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ChucVuID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "DateAllocation": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ReportLostFullDto": {
+        "type": "object",
+        "properties": {
+          "AssetManagementID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "DateLostReport": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "Reason": {
+            "type": "string",
+            "nullable": true
+          },
+          "EmployeeID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "DepartmentID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "ChucVuID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "DateAllocation": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "Note": {
+            "type": "string",
+            "nullable": true
+          },
+          "AssetStatus": {
+            "type": "string",
+            "nullable": true
+          },
+          "AssetStatusID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "CreatedDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "UpdatedDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "UpdatedBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "CreatedBy": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TSAssetAllocationDetailFullDTO": {
+        "type": "object",
+        "properties": {
+          "ID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "STT": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "AssetManagementID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Quantity": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Note": {
+            "type": "string",
+            "nullable": true
+          },
+          "EmployeeID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "DepartmentID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "UpdatedBy": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TSAssetAllocationFullDTO": {
+        "type": "object",
+        "properties": {
+          "ID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Code": {
+            "type": "string",
+            "nullable": true
+          },
+          "DateAllocation": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "EmployeeID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Note": {
+            "type": "string",
+            "nullable": true
+          },
+          "Status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "AssetDetails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TSAssetAllocationDetailFullDTO"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TSAssetManagement": {
+        "type": "object",
+        "properties": {
+          "ID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "IsAllocation": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "StatusID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "DepartmentID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "EmployeeID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "TSAssetID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "TSAssetCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "TSAssetName": {
+            "type": "string",
+            "nullable": true
+          },
+          "SourceID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "Seri": {
+            "type": "string",
+            "nullable": true
+          },
+          "SpecificationsAsset": {
+            "type": "string",
+            "nullable": true
+          },
+          "SupplierID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "DateBuy": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "Insurance": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "DateEffect": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "Status": {
+            "type": "string",
+            "nullable": true
+          },
+          "Note": {
+            "type": "string",
+            "nullable": true
+          },
+          "CreatedDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "CreatedBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "UpdatedDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "UpdatedBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "UnitID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "TSCodeNCC": {
+            "type": "string",
+            "nullable": true
+          },
+          "STT": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "OfficeActiveStatus": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "WindowActiveStatus": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UnitCount": {
+        "type": "object",
+        "properties": {
+          "ID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "UnitCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "UnitName": {
+            "type": "string",
             "nullable": true
           }
         },

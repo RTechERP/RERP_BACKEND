@@ -1,0 +1,421 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\RERP_RTC_Web\\BackEnd\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{72ECC339-9026-4FA8-9B21-77D4A58A9C24}|RERPAPI\\RERPAPI.csproj|d:\\rerp_rtc_web\\backend\\rerpapi\\controllers\\assetscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72ECC339-9026-4FA8-9B21-77D4A58A9C24}|RERPAPI\\RERPAPI.csproj|solutionrelative:rerpapi\\controllers\\assetscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F82A2884-AB17-428B-BBAC-AA6A4B5BA11E}|RERPAPI.Model\\RERPAPI.Model.csproj|d:\\rerp_rtc_web\\backend\\rerpapi.model\\dto\\tsassetallocationfulldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F82A2884-AB17-428B-BBAC-AA6A4B5BA11E}|RERPAPI.Model\\RERPAPI.Model.csproj|solutionrelative:rerpapi.model\\dto\\tsassetallocationfulldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F82A2884-AB17-428B-BBAC-AA6A4B5BA11E}|RERPAPI.Model\\RERPAPI.Model.csproj|d:\\rerp_rtc_web\\backend\\rerpapi.model\\common\\sqlhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F82A2884-AB17-428B-BBAC-AA6A4B5BA11E}|RERPAPI.Model\\RERPAPI.Model.csproj|solutionrelative:rerpapi.model\\common\\sqlhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A04939C-512C-44E4-9E21-A1D956E059E8}|RERPAPI.Repo\\RERPAPI.Repo.csproj|d:\\rerp_rtc_web\\backend\\rerpapi.repo\\genericrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A04939C-512C-44E4-9E21-A1D956E059E8}|RERPAPI.Repo\\RERPAPI.Repo.csproj|solutionrelative:rerpapi.repo\\genericrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F82A2884-AB17-428B-BBAC-AA6A4B5BA11E}|RERPAPI.Model\\RERPAPI.Model.csproj|d:\\rerp_rtc_web\\backend\\rerpapi.model\\entities\\tsassetallocation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F82A2884-AB17-428B-BBAC-AA6A4B5BA11E}|RERPAPI.Model\\RERPAPI.Model.csproj|solutionrelative:rerpapi.model\\entities\\tsassetallocation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F82A2884-AB17-428B-BBAC-AA6A4B5BA11E}|RERPAPI.Model\\RERPAPI.Model.csproj|d:\\rerp_rtc_web\\backend\\rerpapi.model\\entities\\tsassetmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F82A2884-AB17-428B-BBAC-AA6A4B5BA11E}|RERPAPI.Model\\RERPAPI.Model.csproj|solutionrelative:rerpapi.model\\entities\\tsassetmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A04939C-512C-44E4-9E21-A1D956E059E8}|RERPAPI.Repo\\RERPAPI.Repo.csproj|d:\\rerp_rtc_web\\backend\\rerpapi.repo\\genericentity\\tsassetallocationrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A04939C-512C-44E4-9E21-A1D956E059E8}|RERPAPI.Repo\\RERPAPI.Repo.csproj|solutionrelative:rerpapi.repo\\genericentity\\tsassetallocationrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F82A2884-AB17-428B-BBAC-AA6A4B5BA11E}|RERPAPI.Model\\RERPAPI.Model.csproj|d:\\rerp_rtc_web\\backend\\rerpapi.model\\context\\rtccontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F82A2884-AB17-428B-BBAC-AA6A4B5BA11E}|RERPAPI.Model\\RERPAPI.Model.csproj|solutionrelative:rerpapi.model\\context\\rtccontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72ECC339-9026-4FA8-9B21-77D4A58A9C24}|RERPAPI\\RERPAPI.csproj|d:\\rerp_rtc_web\\backend\\rerpapi\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72ECC339-9026-4FA8-9B21-77D4A58A9C24}|RERPAPI\\RERPAPI.csproj|solutionrelative:rerpapi\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F82A2884-AB17-428B-BBAC-AA6A4B5BA11E}|RERPAPI.Model\\RERPAPI.Model.csproj|d:\\rerp_rtc_web\\backend\\rerpapi.model\\dto\\getemployeedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F82A2884-AB17-428B-BBAC-AA6A4B5BA11E}|RERPAPI.Model\\RERPAPI.Model.csproj|solutionrelative:rerpapi.model\\dto\\getemployeedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A04939C-512C-44E4-9E21-A1D956E059E8}|RERPAPI.Repo\\RERPAPI.Repo.csproj|d:\\rerp_rtc_web\\backend\\rerpapi.repo\\genericentity\\employeerepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A04939C-512C-44E4-9E21-A1D956E059E8}|RERPAPI.Repo\\RERPAPI.Repo.csproj|solutionrelative:rerpapi.repo\\genericentity\\employeerepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F82A2884-AB17-428B-BBAC-AA6A4B5BA11E}|RERPAPI.Model\\RERPAPI.Model.csproj|d:\\rerp_rtc_web\\backend\\rerpapi.model\\dto\\employeedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F82A2884-AB17-428B-BBAC-AA6A4B5BA11E}|RERPAPI.Model\\RERPAPI.Model.csproj|solutionrelative:rerpapi.model\\dto\\employeedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F82A2884-AB17-428B-BBAC-AA6A4B5BA11E}|RERPAPI.Model\\RERPAPI.Model.csproj|d:\\rerp_rtc_web\\backend\\rerpapi.model\\dto\\reportlossdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F82A2884-AB17-428B-BBAC-AA6A4B5BA11E}|RERPAPI.Model\\RERPAPI.Model.csproj|solutionrelative:rerpapi.model\\dto\\reportlossdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F82A2884-AB17-428B-BBAC-AA6A4B5BA11E}|RERPAPI.Model\\RERPAPI.Model.csproj|d:\\rerp_rtc_web\\backend\\rerpapi.model\\dto\\employeewithdepartmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F82A2884-AB17-428B-BBAC-AA6A4B5BA11E}|RERPAPI.Model\\RERPAPI.Model.csproj|solutionrelative:rerpapi.model\\dto\\employeewithdepartmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F82A2884-AB17-428B-BBAC-AA6A4B5BA11E}|RERPAPI.Model\\RERPAPI.Model.csproj|d:\\rerp_rtc_web\\backend\\rerpapi.model\\dto\\reportbrokendto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F82A2884-AB17-428B-BBAC-AA6A4B5BA11E}|RERPAPI.Model\\RERPAPI.Model.csproj|solutionrelative:rerpapi.model\\dto\\reportbrokendto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F82A2884-AB17-428B-BBAC-AA6A4B5BA11E}|RERPAPI.Model\\RERPAPI.Model.csproj|d:\\rerp_rtc_web\\backend\\rerpapi.model\\entities\\tslostreportasset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F82A2884-AB17-428B-BBAC-AA6A4B5BA11E}|RERPAPI.Model\\RERPAPI.Model.csproj|solutionrelative:rerpapi.model\\entities\\tslostreportasset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A04939C-512C-44E4-9E21-A1D956E059E8}|RERPAPI.Repo\\RERPAPI.Repo.csproj|d:\\rerp_rtc_web\\backend\\rerpapi.repo\\genericentity\\tslostreportassetrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A04939C-512C-44E4-9E21-A1D956E059E8}|RERPAPI.Repo\\RERPAPI.Repo.csproj|solutionrelative:rerpapi.repo\\genericentity\\tslostreportassetrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F82A2884-AB17-428B-BBAC-AA6A4B5BA11E}|RERPAPI.Model\\RERPAPI.Model.csproj|d:\\rerp_rtc_web\\backend\\rerpapi.model\\entities\\tsallocationevictionasset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F82A2884-AB17-428B-BBAC-AA6A4B5BA11E}|RERPAPI.Model\\RERPAPI.Model.csproj|solutionrelative:rerpapi.model\\entities\\tsallocationevictionasset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F82A2884-AB17-428B-BBAC-AA6A4B5BA11E}|RERPAPI.Model\\RERPAPI.Model.csproj|d:\\rerp_rtc_web\\backend\\rerpapi.model\\dto\\tssourceassetdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F82A2884-AB17-428B-BBAC-AA6A4B5BA11E}|RERPAPI.Model\\RERPAPI.Model.csproj|solutionrelative:rerpapi.model\\dto\\tssourceassetdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F82A2884-AB17-428B-BBAC-AA6A4B5BA11E}|RERPAPI.Model\\RERPAPI.Model.csproj|d:\\rerp_rtc_web\\backend\\rerpapi.model\\entities\\tsreportbrokenasset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F82A2884-AB17-428B-BBAC-AA6A4B5BA11E}|RERPAPI.Model\\RERPAPI.Model.csproj|solutionrelative:rerpapi.model\\entities\\tsreportbrokenasset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A04939C-512C-44E4-9E21-A1D956E059E8}|RERPAPI.Repo\\RERPAPI.Repo.csproj|d:\\rerp_rtc_web\\backend\\rerpapi.repo\\genericentity\\tsallocationevictionassetrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A04939C-512C-44E4-9E21-A1D956E059E8}|RERPAPI.Repo\\RERPAPI.Repo.csproj|solutionrelative:rerpapi.repo\\genericentity\\tsallocationevictionassetrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A04939C-512C-44E4-9E21-A1D956E059E8}|RERPAPI.Repo\\RERPAPI.Repo.csproj|d:\\rerp_rtc_web\\backend\\rerpapi.repo\\genericentity\\tsreportbrokenassetrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A04939C-512C-44E4-9E21-A1D956E059E8}|RERPAPI.Repo\\RERPAPI.Repo.csproj|solutionrelative:rerpapi.repo\\genericentity\\tsreportbrokenassetrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A04939C-512C-44E4-9E21-A1D956E059E8}|RERPAPI.Repo\\RERPAPI.Repo.csproj|d:\\rerp_rtc_web\\backend\\rerpapi.repo\\genericentity\\tsrepairassetrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A04939C-512C-44E4-9E21-A1D956E059E8}|RERPAPI.Repo\\RERPAPI.Repo.csproj|solutionrelative:rerpapi.repo\\genericentity\\tsrepairassetrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A04939C-512C-44E4-9E21-A1D956E059E8}|RERPAPI.Repo\\RERPAPI.Repo.csproj|d:\\rerp_rtc_web\\backend\\rerpapi.repo\\genericentity\\tsassetallocationdetailrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A04939C-512C-44E4-9E21-A1D956E059E8}|RERPAPI.Repo\\RERPAPI.Repo.csproj|solutionrelative:rerpapi.repo\\genericentity\\tsassetallocationdetailrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A04939C-512C-44E4-9E21-A1D956E059E8}|RERPAPI.Repo\\RERPAPI.Repo.csproj|d:\\rerp_rtc_web\\backend\\rerpapi.repo\\genericentity\\tsstatusassetrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A04939C-512C-44E4-9E21-A1D956E059E8}|RERPAPI.Repo\\RERPAPI.Repo.csproj|solutionrelative:rerpapi.repo\\genericentity\\tsstatusassetrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SQLHelper.cs",
+              "DocumentMoniker": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Model\\Common\\SQLHelper.cs",
+              "RelativeDocumentMoniker": "RERPAPI.Model\\Common\\SQLHelper.cs",
+              "ToolTip": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Model\\Common\\SQLHelper.cs",
+              "RelativeToolTip": "RERPAPI.Model\\Common\\SQLHelper.cs",
+              "ViewState": "AgIAAJQAAAAAAAAAAAAAAL0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T06:46:44.151Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TSAssetAllocationFullDTO.cs",
+              "DocumentMoniker": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Model\\DTO\\TSAssetAllocationFullDTO.cs",
+              "RelativeDocumentMoniker": "RERPAPI.Model\\DTO\\TSAssetAllocationFullDTO.cs",
+              "ToolTip": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Model\\DTO\\TSAssetAllocationFullDTO.cs",
+              "RelativeToolTip": "RERPAPI.Model\\DTO\\TSAssetAllocationFullDTO.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAIwBgAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T04:03:16.301Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AssetsController.cs",
+              "DocumentMoniker": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI\\Controllers\\AssetsController.cs",
+              "RelativeDocumentMoniker": "RERPAPI\\Controllers\\AssetsController.cs",
+              "ToolTip": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI\\Controllers\\AssetsController.cs",
+              "RelativeToolTip": "RERPAPI\\Controllers\\AssetsController.cs",
+              "ViewState": "AgIAAN4AAAAAAAAAAAAkwO4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T08:47:44.901Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TSAssetAllocation.cs",
+              "DocumentMoniker": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Model\\Entities\\TSAssetAllocation.cs",
+              "RelativeDocumentMoniker": "RERPAPI.Model\\Entities\\TSAssetAllocation.cs",
+              "ToolTip": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Model\\Entities\\TSAssetAllocation.cs",
+              "RelativeToolTip": "RERPAPI.Model\\Entities\\TSAssetAllocation.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAA3wCgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T03:58:38.899Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TSAssetManagement.cs",
+              "DocumentMoniker": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Model\\Entities\\TSAssetManagement.cs",
+              "RelativeDocumentMoniker": "RERPAPI.Model\\Entities\\TSAssetManagement.cs",
+              "ToolTip": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Model\\Entities\\TSAssetManagement.cs",
+              "RelativeToolTip": "RERPAPI.Model\\Entities\\TSAssetManagement.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAuwFUAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T01:26:09.466Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GenericRepo.cs",
+              "DocumentMoniker": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Repo\\GenericRepo.cs",
+              "RelativeDocumentMoniker": "RERPAPI.Repo\\GenericRepo.cs",
+              "ToolTip": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Repo\\GenericRepo.cs",
+              "RelativeToolTip": "RERPAPI.Repo\\GenericRepo.cs",
+              "ViewState": "AgIAALwAAAAAAAAAAAAAAMQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T03:24:56.607Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TSAssetAllocationRepo.cs",
+              "DocumentMoniker": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Repo\\GenericEntity\\TSAssetAllocationRepo.cs",
+              "RelativeDocumentMoniker": "RERPAPI.Repo\\GenericEntity\\TSAssetAllocationRepo.cs",
+              "ToolTip": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Repo\\GenericEntity\\TSAssetAllocationRepo.cs",
+              "RelativeToolTip": "RERPAPI.Repo\\GenericEntity\\TSAssetAllocationRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T02:05:22.245Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RTCContext.cs",
+              "DocumentMoniker": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Model\\Context\\RTCContext.cs",
+              "RelativeDocumentMoniker": "RERPAPI.Model\\Context\\RTCContext.cs",
+              "ToolTip": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Model\\Context\\RTCContext.cs",
+              "RelativeToolTip": "RERPAPI.Model\\Context\\RTCContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T02:11:13.349Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "GetEmployeeDto.cs",
+              "DocumentMoniker": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Model\\DTO\\GetEmployeeDto.cs",
+              "RelativeDocumentMoniker": "RERPAPI.Model\\DTO\\GetEmployeeDto.cs",
+              "ToolTip": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Model\\DTO\\GetEmployeeDto.cs",
+              "RelativeToolTip": "RERPAPI.Model\\DTO\\GetEmployeeDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T08:51:56.341Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ReportBrokenDto.cs",
+              "DocumentMoniker": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Model\\DTO\\ReportBrokenDto.cs",
+              "RelativeDocumentMoniker": "RERPAPI.Model\\DTO\\ReportBrokenDto.cs",
+              "ToolTip": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Model\\DTO\\ReportBrokenDto.cs",
+              "RelativeToolTip": "RERPAPI.Model\\DTO\\ReportBrokenDto.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwAgAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T07:44:54.389Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EmployeeController.cs",
+              "DocumentMoniker": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI\\Controllers\\EmployeeController.cs",
+              "RelativeDocumentMoniker": "RERPAPI\\Controllers\\EmployeeController.cs",
+              "ToolTip": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI\\Controllers\\EmployeeController.cs",
+              "RelativeToolTip": "RERPAPI\\Controllers\\EmployeeController.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAwwFEAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T03:58:02.049Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "EmployeeRepo.cs",
+              "DocumentMoniker": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Repo\\GenericEntity\\EmployeeRepo.cs",
+              "RelativeDocumentMoniker": "RERPAPI.Repo\\GenericEntity\\EmployeeRepo.cs",
+              "ToolTip": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Repo\\GenericEntity\\EmployeeRepo.cs",
+              "RelativeToolTip": "RERPAPI.Repo\\GenericEntity\\EmployeeRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T07:27:05.866Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "EmployeeDTO.cs",
+              "DocumentMoniker": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Model\\DTO\\EmployeeDTO.cs",
+              "RelativeDocumentMoniker": "RERPAPI.Model\\DTO\\EmployeeDTO.cs",
+              "ToolTip": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Model\\DTO\\EmployeeDTO.cs",
+              "RelativeToolTip": "RERPAPI.Model\\DTO\\EmployeeDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T02:26:03.539Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "EmployeeWithDepartmentDto.cs",
+              "DocumentMoniker": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Model\\DTO\\EmployeeWithDepartmentDto.cs",
+              "RelativeDocumentMoniker": "RERPAPI.Model\\DTO\\EmployeeWithDepartmentDto.cs",
+              "ToolTip": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Model\\DTO\\EmployeeWithDepartmentDto.cs",
+              "RelativeToolTip": "RERPAPI.Model\\DTO\\EmployeeWithDepartmentDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T02:26:04.36Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ReportLossDTO.cs",
+              "DocumentMoniker": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Model\\DTO\\ReportLossDTO.cs",
+              "RelativeDocumentMoniker": "RERPAPI.Model\\DTO\\ReportLossDTO.cs",
+              "ToolTip": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Model\\DTO\\ReportLossDTO.cs",
+              "RelativeToolTip": "RERPAPI.Model\\DTO\\ReportLossDTO.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAgAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T01:21:01.422Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "TSAllocationEvictionAsset.cs",
+              "DocumentMoniker": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Model\\Entities\\TSAllocationEvictionAsset.cs",
+              "RelativeDocumentMoniker": "RERPAPI.Model\\Entities\\TSAllocationEvictionAsset.cs",
+              "ToolTip": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Model\\Entities\\TSAllocationEvictionAsset.cs",
+              "RelativeToolTip": "RERPAPI.Model\\Entities\\TSAllocationEvictionAsset.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAowCsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T01:25:59.006Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "TSLostReportAsset.cs",
+              "DocumentMoniker": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Model\\Entities\\TSLostReportAsset.cs",
+              "RelativeDocumentMoniker": "RERPAPI.Model\\Entities\\TSLostReportAsset.cs",
+              "ToolTip": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Model\\Entities\\TSLostReportAsset.cs",
+              "RelativeToolTip": "RERPAPI.Model\\Entities\\TSLostReportAsset.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T01:25:48.152Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "TSLostReportAssetRepo.cs",
+              "DocumentMoniker": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Repo\\GenericEntity\\TSLostReportAssetRepo.cs",
+              "RelativeDocumentMoniker": "RERPAPI.Repo\\GenericEntity\\TSLostReportAssetRepo.cs",
+              "ToolTip": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Repo\\GenericEntity\\TSLostReportAssetRepo.cs",
+              "RelativeToolTip": "RERPAPI.Repo\\GenericEntity\\TSLostReportAssetRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T01:17:03.785Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "TSSourceAssetDTO.cs",
+              "DocumentMoniker": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Model\\DTO\\TSSourceAssetDTO.cs",
+              "RelativeDocumentMoniker": "RERPAPI.Model\\DTO\\TSSourceAssetDTO.cs",
+              "ToolTip": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Model\\DTO\\TSSourceAssetDTO.cs",
+              "RelativeToolTip": "RERPAPI.Model\\DTO\\TSSourceAssetDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T01:23:57.481Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "TSStatusAssetRepo.cs",
+              "DocumentMoniker": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Repo\\GenericEntity\\TSStatusAssetRepo.cs",
+              "RelativeDocumentMoniker": "RERPAPI.Repo\\GenericEntity\\TSStatusAssetRepo.cs",
+              "ToolTip": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Repo\\GenericEntity\\TSStatusAssetRepo.cs",
+              "RelativeToolTip": "RERPAPI.Repo\\GenericEntity\\TSStatusAssetRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T08:42:19.408Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "TSAssetAllocationDetailRepo.cs",
+              "DocumentMoniker": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Repo\\GenericEntity\\TSAssetAllocationDetailRepo.cs",
+              "RelativeDocumentMoniker": "RERPAPI.Repo\\GenericEntity\\TSAssetAllocationDetailRepo.cs",
+              "ToolTip": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Repo\\GenericEntity\\TSAssetAllocationDetailRepo.cs",
+              "RelativeToolTip": "RERPAPI.Repo\\GenericEntity\\TSAssetAllocationDetailRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T01:26:08.565Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "TSReportBrokenAssetRepo.cs",
+              "DocumentMoniker": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Repo\\GenericEntity\\TSReportBrokenAssetRepo.cs",
+              "RelativeDocumentMoniker": "RERPAPI.Repo\\GenericEntity\\TSReportBrokenAssetRepo.cs",
+              "ToolTip": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Repo\\GenericEntity\\TSReportBrokenAssetRepo.cs",
+              "RelativeToolTip": "RERPAPI.Repo\\GenericEntity\\TSReportBrokenAssetRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T01:12:20.769Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "TSRepairAssetRepo.cs",
+              "DocumentMoniker": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Repo\\GenericEntity\\TSRepairAssetRepo.cs",
+              "RelativeDocumentMoniker": "RERPAPI.Repo\\GenericEntity\\TSRepairAssetRepo.cs",
+              "ToolTip": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Repo\\GenericEntity\\TSRepairAssetRepo.cs",
+              "RelativeToolTip": "RERPAPI.Repo\\GenericEntity\\TSRepairAssetRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T01:12:28.552Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "TSReportBrokenAsset.cs",
+              "DocumentMoniker": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Model\\Entities\\TSReportBrokenAsset.cs",
+              "RelativeDocumentMoniker": "RERPAPI.Model\\Entities\\TSReportBrokenAsset.cs",
+              "ToolTip": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Model\\Entities\\TSReportBrokenAsset.cs",
+              "RelativeToolTip": "RERPAPI.Model\\Entities\\TSReportBrokenAsset.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T08:30:04.839Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "TSAllocationEvictionAssetRepo.cs",
+              "DocumentMoniker": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Repo\\GenericEntity\\TSAllocationEvictionAssetRepo.cs",
+              "RelativeDocumentMoniker": "RERPAPI.Repo\\GenericEntity\\TSAllocationEvictionAssetRepo.cs",
+              "ToolTip": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Repo\\GenericEntity\\TSAllocationEvictionAssetRepo.cs",
+              "RelativeToolTip": "RERPAPI.Repo\\GenericEntity\\TSAllocationEvictionAssetRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T04:06:08.457Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

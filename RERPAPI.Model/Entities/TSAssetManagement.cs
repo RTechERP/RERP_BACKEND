@@ -72,7 +72,8 @@ public partial class TSAssetManagement
 
     public string? TSCodeNCC { get; set; }
 
-    public int? STT { get; set; }
+    public long? STT { get; set; }
+
 
     /// <summary>
     /// 1: Chưa active; 2: Đã active; 3: Crack

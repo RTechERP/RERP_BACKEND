@@ -9,3 +9,15 @@ D:\LeTheAnh\RTC\Project\2025\SourceCode\RTC.25.008\Backend\RERPAPI\RERPAPI.IRepo
 D:\LeTheAnh\RTC\Project\2025\SourceCode\RTC.25.008\Backend\RERPAPI\RERPAPI.IRepo\obj\Debug\net8.0\refint\RERPAPI.IRepo.dll
 D:\LeTheAnh\RTC\Project\2025\SourceCode\RTC.25.008\Backend\RERPAPI\RERPAPI.IRepo\obj\Debug\net8.0\RERPAPI.IRepo.pdb
 D:\LeTheAnh\RTC\Project\2025\SourceCode\RTC.25.008\Backend\RERPAPI\RERPAPI.IRepo\obj\Debug\net8.0\ref\RERPAPI.IRepo.dll
+D:\RERP_RTC_Web\BackEnd\RERPAPI.IRepo\bin\Debug\net8.0\RERPAPI.IRepo.deps.json
+D:\RERP_RTC_Web\BackEnd\RERPAPI.IRepo\bin\Debug\net8.0\RERPAPI.IRepo.dll
+D:\RERP_RTC_Web\BackEnd\RERPAPI.IRepo\bin\Debug\net8.0\RERPAPI.IRepo.pdb
+D:\RERP_RTC_Web\BackEnd\RERPAPI.IRepo\obj\Debug\net8.0\RERPAPI.IRepo.GeneratedMSBuildEditorConfig.editorconfig
+D:\RERP_RTC_Web\BackEnd\RERPAPI.IRepo\obj\Debug\net8.0\RERPAPI.IRepo.AssemblyInfoInputs.cache
+D:\RERP_RTC_Web\BackEnd\RERPAPI.IRepo\obj\Debug\net8.0\RERPAPI.IRepo.AssemblyInfo.cs
+D:\RERP_RTC_Web\BackEnd\RERPAPI.IRepo\obj\Debug\net8.0\RERPAPI.IRepo.csproj.CoreCompileInputs.cache
+D:\RERP_RTC_Web\BackEnd\RERPAPI.IRepo\obj\Debug\net8.0\RERPAPI.IRepo.sourcelink.json
+D:\RERP_RTC_Web\BackEnd\RERPAPI.IRepo\obj\Debug\net8.0\RERPAPI.IRepo.dll
+D:\RERP_RTC_Web\BackEnd\RERPAPI.IRepo\obj\Debug\net8.0\refint\RERPAPI.IRepo.dll
+D:\RERP_RTC_Web\BackEnd\RERPAPI.IRepo\obj\Debug\net8.0\RERPAPI.IRepo.pdb
+D:\RERP_RTC_Web\BackEnd\RERPAPI.IRepo\obj\Debug\net8.0\ref\RERPAPI.IRepo.dll
