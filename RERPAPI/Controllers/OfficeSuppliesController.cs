@@ -38,7 +38,7 @@ namespace RERPAPI.Controllers
                 data = result
             });
         }
-        [HttpGet("getu")]
+        [HttpGet("GetOfficeSupplyUnit")]
         public IActionResult getunini()
         {
             List<OfficeSupplyUnit> result = SQLHelper<OfficeSupplyUnit>.FindAll();
