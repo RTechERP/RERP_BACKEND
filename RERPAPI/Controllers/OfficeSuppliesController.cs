@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using RERPAPI.Model.Common;
 using RERPAPI.Model.Context;
 using RERPAPI.Model.DTO;
@@ -80,6 +81,31 @@ namespace RERPAPI.Controllers
             await db.SaveChangesAsync();
             return Ok(new { message = "Đã xóa thành công." });
         }
+        [HttpGet]
+        [Route("next-codeRTC")]
+        public async Task<IActionResult> GetNextCodeRTC()
+        {
+            var allCodes = await db.OfficeSupplies
+    .Where(x => x.CodeRTC.StartsWith("VPP"))
+    .Select(x => x.CodeRTC)
+    .ToListAsync();
+
+            int maxNumber = 0;
+            foreach (var code in allCodes)
+            {
+                var numberPart = code.Substring(3);
+                if (int.TryParse(numberPart, out int num))
+                {
+                    if (num > maxNumber)
+                        maxNumber = num;
+                }
+            }
+
+            int nextNumber = maxNumber + 1;
+            var nextCodeRTC = "VPP" + nextNumber;
+            return Ok(nextCodeRTC);
+
+        }
 
         [HttpPost]
         [Route("themVPP")]
@@ -90,15 +116,28 @@ namespace RERPAPI.Controllers
                 return BadRequest(ModelState);
             }
 
-            var DDCheck = db.OfficeSupplies.FirstOrDefault(x => x.ID == input.ID);
-            if (DDCheck != null)
+            // Tạo CodeRTC tiếp theo (giống logic trong next-codeRTC)
+            var maxCode = await db.OfficeSupplies
+                .Where(x => x.CodeRTC.StartsWith("VPP"))
+                .OrderByDescending(x => x.CodeRTC)
+                .Select(x => x.CodeRTC)
+                .FirstOrDefaultAsync();
+
+            int nextNumber = 1;
+            if (!string.IsNullOrEmpty(maxCode))
             {
-                return BadRequest("Trùng ID");
+                var numberPart = maxCode.Substring(3);
+                if (int.TryParse(numberPart, out int currentNumber))
+                {
+                    nextNumber = currentNumber + 1;
+                }
             }
+
+            var newCodeRTC = "VPP" + nextNumber;
 
             var newVP = new OfficeSupply
             {
-                CodeRTC = input.CodeRTC,
+                CodeRTC = newCodeRTC, // Gán CodeRTC đã sinh
                 CodeNCC = input.CodeNCC,
                 NameRTC = input.NameRTC,
                 NameNCC = input.NameNCC,
@@ -113,9 +152,10 @@ namespace RERPAPI.Controllers
                 UpdatedDate = input.UpdatedDate ?? DateTime.Now,
             };
 
-            db.OfficeSupplies.Add(newVP);
-            db.SaveChanges();
-            return Ok(newVP);
+            await db.OfficeSupplies.AddAsync(newVP);
+            await db.SaveChangesAsync();
+
+            return CreatedAtAction(nameof(AddVPP), new { id = newVP.ID }, newVP);
         }
 
         [HttpPost("capnhatVPP")]
