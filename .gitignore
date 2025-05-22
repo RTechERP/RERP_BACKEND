@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/RERPAPI/FileContentIndex/177d452e-46c6-45b2-a5ab-f150ac9f08ca.vsidx
+*.vsidx
+/.vs/RERPAPI/v17/DocumentLayout.backup.json
+/.vs/RERPAPI/v17/DocumentLayout.json
+/.vs/RERPAPI/v17/.suo
+/.vs/RERPAPI/CopilotIndices/17.13.444.19527
