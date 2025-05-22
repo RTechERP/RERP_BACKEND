@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using RERPAPI.Model.Common;
 using RERPAPI.Model.Context;
 using RERPAPI.Model.Entities;
+using RERPAPI.Repo.GenericEntity;
 
 namespace RERPAPI.Controllers
 {
@@ -11,7 +12,8 @@ namespace RERPAPI.Controllers
     public class OfficeSupplyRequestsController : ControllerBase
     {
         RTCContext db = new RTCContext();
-    
+        OfficeSupplyRequestsRepo officesupplyrequests = new OfficeSupplyRequestsRepo();
+
         [HttpGet("GetdataDepartment")]
         public IActionResult GetdataDepartment()
         {
@@ -61,28 +63,26 @@ namespace RERPAPI.Controllers
 
                 foreach (var id in ids)
                 {
-                    var item = (from a in db.OfficeSupplyRequests1
-                                where a.ID == id
-                                && a.IsApproved == false
-                                && a.IsAdminApproved == false
-                                select a).ToList().FirstOrDefault();
-                    if (item != null)
+                    OfficeSupplyRequest1 item = officesupplyrequests.GetByID(id);
+
+                    if (item != null && item.IsApproved == false && item.IsAdminApproved == false)
                     {
                         item.IsAdminApproved = true;
                         item.DateAdminApproved = DateTime.Now;
-                        db.OfficeSupplyRequests1.Update(item); // Cập nhật lại mục
+
+                        await officesupplyrequests.UpdateAsync(item);
                     }
                 }
-                await db.SaveChangesAsync();
+
                 return Ok(new
                 {
                     status = 1,
-
+                    message = "Phê duyệt thành công."
                 });
             }
             catch (Exception ex)
             {
-                return Ok(new
+                return BadRequest(new
                 {
                     status = 0,
                     message = ex.Message,
@@ -101,19 +101,14 @@ namespace RERPAPI.Controllers
 
                 foreach (var id in ids)
                 {
-                    var item = (from a in db.OfficeSupplyRequests1
-                                where a.ID == id
-                                && a.IsApproved == false
-                                && a.IsAdminApproved == true
-                                select a).ToList().FirstOrDefault();
+                    OfficeSupplyRequest1 item = officesupplyrequests.GetByID(id);
                     if (item != null)
                     {
                         item.IsAdminApproved = false;
                         item.DateAdminApproved = DateTime.Now;
-                        db.OfficeSupplyRequests1.Update(item); // Cập nhật lại mục
+                        await officesupplyrequests.UpdateAsync(item);
                     }
-                }
-                await db.SaveChangesAsync();
+                }       
                 return Ok(new
                 {
                     status = 1,
@@ -140,19 +135,14 @@ namespace RERPAPI.Controllers
                     return BadRequest("Danh sách ID không hợp lệ.");
                 foreach (var id in ids)
                 {
-                    var item = (from a in db.OfficeSupplyRequests1
-                                where a.ID == id
-                                && a.IsAdminApproved == true
-                                && a.IsApproved == false
-                                select a).ToList().FirstOrDefault();
+                    OfficeSupplyRequest1 item = officesupplyrequests.GetByID(id);
                     if (item != null)
                     {
                         item.IsApproved = true;
                         item.DateApproved = DateTime.Now;
-                        db.OfficeSupplyRequests1.Update(item);
+                        await officesupplyrequests.UpdateAsync(item);
                     }
-                }
-                await db.SaveChangesAsync();
+                }              
                 return Ok(new
                 {
                     status = 1,
@@ -177,19 +167,14 @@ namespace RERPAPI.Controllers
                     return BadRequest("Danh sách ID không hợp lệ.");
                 foreach (var id in ids)
                 {
-                    var item = (from a in db.OfficeSupplyRequests1
-                                where a.ID == id
-                                && a.IsAdminApproved == true
-                                && a.IsApproved == true
-                                select a).ToList().FirstOrDefault();
+                    OfficeSupplyRequest1 item = officesupplyrequests.GetByID(id);
                     if (item != null)
                     {
                         item.IsApproved = false;
                         item.DateApproved = DateTime.Now;
-                        db.OfficeSupplyRequests1.Update(item);
+                        await officesupplyrequests.UpdateAsync(item);
                     }
                 }
-                await db.SaveChangesAsync();
                 return Ok(new
                 {
                     status = 1,
