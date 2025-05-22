@@ -116,28 +116,29 @@ namespace RERPAPI.Controllers
                 return BadRequest(ModelState);
             }
 
-            // Tạo CodeRTC tiếp theo (giống logic trong next-codeRTC)
-            var maxCode = await db.OfficeSupplies
+            // Lấy tất cả mã CodeRTC có tiền tố "VPP"
+            var allCodes = await db.OfficeSupplies
                 .Where(x => x.CodeRTC.StartsWith("VPP"))
-                .OrderByDescending(x => x.CodeRTC)
                 .Select(x => x.CodeRTC)
-                .FirstOrDefaultAsync();
+                .ToListAsync();
 
-            int nextNumber = 1;
-            if (!string.IsNullOrEmpty(maxCode))
+            int maxNumber = 0;
+            foreach (var code in allCodes)
             {
-                var numberPart = maxCode.Substring(3);
-                if (int.TryParse(numberPart, out int currentNumber))
+                var numberPart = code.Substring(3);
+                if (int.TryParse(numberPart, out int num))
                 {
-                    nextNumber = currentNumber + 1;
+                    if (num > maxNumber)
+                        maxNumber = num;
                 }
             }
 
+            int nextNumber = maxNumber + 1;
             var newCodeRTC = "VPP" + nextNumber;
 
             var newVP = new OfficeSupply
             {
-                CodeRTC = newCodeRTC, // Gán CodeRTC đã sinh
+                CodeRTC = newCodeRTC, // Gán mã sinh tự động
                 CodeNCC = input.CodeNCC,
                 NameRTC = input.NameRTC,
                 NameNCC = input.NameNCC,
@@ -157,6 +158,7 @@ namespace RERPAPI.Controllers
 
             return CreatedAtAction(nameof(AddVPP), new { id = newVP.ID }, newVP);
         }
+
 
         [HttpPost("capnhatVPP")]
         public async Task<IActionResult> UpdateVPPAsync([FromBody] OfficeSuppliesRepo input)
