@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using NuGet.Packaging.Signing;
 using RERPAPI.Model.Common;
 using RERPAPI.Model.Context;
 using RERPAPI.Model.DTO;
@@ -14,9 +15,10 @@ namespace RERPAPI.Controllers
     [ApiController]
     public class OfficeSuppliesController : ControllerBase
     {
-      
+
         private readonly RTCContext _context;
         RTCContext db = new RTCContext();
+        OfficeSuplyRepo off = new OfficeSuplyRepo();
 
         OfficeSupplyUnitRepo osurepo = new OfficeSupplyUnitRepo();
         public OfficeSuppliesController(RTCContext context)
@@ -46,23 +48,35 @@ namespace RERPAPI.Controllers
             List<OfficeSupplyUnit> result = SQLHelper<OfficeSupplyUnit>.FindAll();
             var data = result.Where(x => x.IsDeleted == false).ToList();
             return Ok(
-                new { status = 0,data=data}
+                new { status = 0, data = data }
             );
         }
-        [HttpGet("{id}")]
-        public async Task<ActionResult<OfficeSupply>> GetOfficeSupply(int id)
-        {
-            var officeSupply = await _context.OfficeSupplies.FindAsync(id);
-
-            if (officeSupply == null)
-            {
-                return NotFound();
-            }
-
-            return officeSupply;
-        }
      
-        [HttpPost("delete-vpp")]
+        [HttpGet("GetbyIDOfficeSupply")]
+        public IActionResult GetbyIDOfficeSupply(int id)
+        {
+            try
+            {
+                OfficeSupply dst = off.GetByID(id);
+                return Ok(new
+                {
+                    status = 1,
+                    data = dst
+                });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new
+                {
+                    status = 0,
+                    message = ex.Message,
+                    error = ex.ToString()
+                });
+            }
+        }
+        
+
+        [HttpPost("DeleteOfficeSupply")]
         public async Task<IActionResult> DeleteVpp([FromBody] List<int> ids)
         {
             if (ids == null || ids.Count == 0)
@@ -74,22 +88,23 @@ namespace RERPAPI.Controllers
                 if (item != null)
                 {
                     item.IsDeleted = true; // Gán trường IsDeleted thành true
-                    db.OfficeSupplies.Update(item); // Cập nhật lại mục
+                    /* await off.UpdateAsync(item);*/
+                    db.OfficeSupplies.Update(item);/* // Cập nhật lại mục*/
                 }
             }
 
             await db.SaveChangesAsync();
             return Ok(new { message = "Đã xóa thành công." });
         }
+
         [HttpGet]
         [Route("next-codeRTC")]
         public async Task<IActionResult> GetNextCodeRTC()
         {
             var allCodes = await db.OfficeSupplies
-    .Where(x => x.CodeRTC.StartsWith("VPP"))
-    .Select(x => x.CodeRTC)
-    .ToListAsync();
-
+                            .Where(x => x.CodeRTC.StartsWith("VPP"))
+                            .Select(x => x.CodeRTC)
+                            .ToListAsync();
             int maxNumber = 0;
             foreach (var code in allCodes)
             {
@@ -100,111 +115,43 @@ namespace RERPAPI.Controllers
                         maxNumber = num;
                 }
             }
-
             int nextNumber = maxNumber + 1;
             var nextCodeRTC = "VPP" + nextNumber;
             return Ok(nextCodeRTC);
-
         }
 
-        [HttpPost]
-        [Route("themVPP")]
-        public async Task<IActionResult> AddVPP([FromBody] OfficeSuppliesRepo input)
+        //cap nhat and them
+        [HttpPost("AddandUpdate")]
+        public async Task<IActionResult> AddandUpdate([FromBody] OfficeSupply officesupply)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
 
-            // Lấy tất cả mã CodeRTC có tiền tố "VPP"
-            var allCodes = await db.OfficeSupplies
-                .Where(x => x.CodeRTC.StartsWith("VPP"))
-                .Select(x => x.CodeRTC)
-                .ToListAsync();
-
-            int maxNumber = 0;
-            foreach (var code in allCodes)
+            try
             {
-                var numberPart = code.Substring(3);
-                if (int.TryParse(numberPart, out int num))
+                if (officesupply.ID <= 0)
                 {
-                    if (num > maxNumber)
-                        maxNumber = num;
+                    officesupply.CodeRTC = off.GetNextCodeRTC();
+                    await off.CreateAsync(officesupply);
                 }
+                else await off.UpdateAsync(officesupply);
+
+                return Ok(new
+                {
+                    status = 1,
+
+                });
             }
-
-            int nextNumber = maxNumber + 1;
-            var newCodeRTC = "VPP" + nextNumber;
-
-            var newVP = new OfficeSupply
+            catch (Exception ex)
             {
-                CodeRTC = newCodeRTC, // Gán mã sinh tự động
-                CodeNCC = input.CodeNCC,
-                NameRTC = input.NameRTC,
-                NameNCC = input.NameNCC,
-                Price = input.Price,
-                RequestLimit = input.RequestLimit ?? 1,
-                Type = input.Type,
-                IsDeleted = false,
-                SupplyUnitID = input.SupplyUnitID,
-                CreatedBy = input.CreatedBy,
-                CreatedDate = input.CreatedDate ?? DateTime.Now,
-                UpdatedBy = input.UpdatedBy,
-                UpdatedDate = input.UpdatedDate ?? DateTime.Now,
-            };
 
-            await db.OfficeSupplies.AddAsync(newVP);
-            await db.SaveChangesAsync();
-
-            return CreatedAtAction(nameof(AddVPP), new { id = newVP.ID }, newVP);
+                return BadRequest(new
+                {
+                    status = 0,
+                    message = ex.Message,
+                    error = ex.ToString()
+                });
+            }
         }
 
-
-        [HttpPost("capnhatVPP")]
-        public async Task<IActionResult> UpdateVPPAsync([FromBody] OfficeSuppliesRepo input)
-        {
-            var offlice = await db.OfficeSupplies.FindAsync(input.ID);
-            if (offlice == null)
-            {
-                return NotFound();
-            }
-
-            // Kiểm tra từng thuộc tính và cập nhật chỉ khi không bị bỏ trống hoặc null
-            if (!string.IsNullOrEmpty(input.CodeNCC))
-            {
-                offlice.CodeNCC = input.CodeNCC;
-            }
-
-            if (!string.IsNullOrEmpty(input.NameNCC))
-            {
-                offlice.NameNCC = input.NameNCC;
-            }
-
-            if (!string.IsNullOrEmpty(input.NameRTC))
-            {
-                offlice.NameRTC = input.NameRTC;
-            }
-
-            if (input.RequestLimit > 0)
-            {
-                offlice.RequestLimit = input.RequestLimit;
-            }
-
-            if (input.SupplyUnitID > 0)
-            {
-                offlice.SupplyUnitID = input.SupplyUnitID;
-            }
-
-            if (input.Type.HasValue)
-            {
-                offlice.Type = input.Type;
-            }
-            // Update the offlice in the database
-            db.OfficeSupplies.Update(offlice);
-            await db.SaveChangesAsync();
-
-            return Ok();
-        }
         //danh sách tính
         [HttpPost("savedatas")]
         public async Task<IActionResult> SaveDST([FromBody] OfficeSupplyUnit dst)
@@ -258,7 +205,7 @@ namespace RERPAPI.Controllers
             }
         }
 
-        [HttpPost("deleteOfficeSupplyUnit")]
+        [HttpPost("DeleteOfficeSupplyUnit")]
         public async Task<IActionResult> DeleteOfficeSupplyUnit([FromBody] List<int> ids)
         {
             if (ids == null || ids.Count == 0)
@@ -273,11 +220,8 @@ namespace RERPAPI.Controllers
                     db.OfficeSupplyUnits.Update(item); // Cập nhật lại mục
                 }
             }
-
             await db.SaveChangesAsync();
             return Ok(new { message = "Đã xóa thành công." });
         }
-
-
     }
 }
