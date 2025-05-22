@@ -17,5 +17,5 @@ public partial class OfficeSupplyUnit
 
     public DateTime? UpdatedDate { get; set; }
     // Thêm trường mới
-    public bool IsDelete { get; set; }
+    public bool IsDeleted { get; set; }
 }

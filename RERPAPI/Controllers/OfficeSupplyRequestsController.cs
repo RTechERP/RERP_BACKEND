@@ -12,7 +12,7 @@ namespace RERPAPI.Controllers
     {
         RTCContext db = new RTCContext();
     
-        [HttpGet("GetdataDeparrment")]
+        [HttpGet("GetdataDepartment")]
         public IActionResult GetdataDepartment()
         {
             List<Department> departmentList = SQLHelper<Department>.FindAll().OrderBy(x => x.STT).ToList();

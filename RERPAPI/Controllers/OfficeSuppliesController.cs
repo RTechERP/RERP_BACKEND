@@ -31,19 +31,21 @@ namespace RERPAPI.Controllers
                 new string[] { "@KeyWord" },
                new object[] { (object)(keyword ?? "") }  // đảm bảo không null
             );
-
+            var data = result.Where(x => x.IsDeleted == false).ToList();
             return Ok(new
             {
                 status = 0,
-                data = result
+                data = data
             });
         }
+
         [HttpGet("GetOfficeSupplyUnit")]
         public IActionResult getunini()
         {
             List<OfficeSupplyUnit> result = SQLHelper<OfficeSupplyUnit>.FindAll();
+            var data = result.Where(x => x.IsDeleted == false).ToList();
             return Ok(
-                new { status = 0,data=result}
+                new { status = 0,data=data}
             );
         }
         [HttpGet("{id}")]
@@ -57,21 +59,6 @@ namespace RERPAPI.Controllers
             }
 
             return officeSupply;
-        }
-        [HttpGet("getUnit")]
-        public async Task<IActionResult> getUnit()
-        {
-            var query = (from a in db.OfficeSupplyUnits select a);
-            var totalCount = query.Count();
-            var listUnit = query
-                .ToList();
-            var result = new
-            {
-                TotalCount = totalCount,
-                Items = listUnit
-            };
-
-            return Ok(result);
         }
      
         [HttpPost("delete-vpp")]
@@ -184,6 +171,7 @@ namespace RERPAPI.Controllers
             {
                 if (dst.ID <= 0)
                 {
+                    dst.IsDeleted = false;
                     await osurepo.CreateAsync(dst);
                 }
                 else await osurepo.UpdateAsync(dst);
@@ -209,7 +197,7 @@ namespace RERPAPI.Controllers
         public IActionResult GetByID(int id)
         {
             try
-            {            
+            {
                 OfficeSupplyUnit dst = osurepo.GetByID(id);
                 return Ok(new
                 {
@@ -226,6 +214,26 @@ namespace RERPAPI.Controllers
                     error = ex.ToString()
                 });
             }
+        }
+
+        [HttpPost("deleteOfficeSupplyUnit")]
+        public async Task<IActionResult> DeleteOfficeSupplyUnit([FromBody] List<int> ids)
+        {
+            if (ids == null || ids.Count == 0)
+                return BadRequest("Danh sách ID không hợp lệ.");
+
+            foreach (var id in ids)
+            {
+                var item = await db.OfficeSupplyUnits.FindAsync(id);
+                if (item != null)
+                {
+                    item.IsDeleted = true; // Gán trường IsDeleted thành true
+                    db.OfficeSupplyUnits.Update(item); // Cập nhật lại mục
+                }
+            }
+
+            await db.SaveChangesAsync();
+            return Ok(new { message = "Đã xóa thành công." });
         }
 
 
