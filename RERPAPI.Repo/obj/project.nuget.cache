@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BQj2lsCemqA=",
+  "dgSpecHash": "XgN/oFt0ZkU=",
   "success": true,
-  "projectFilePath": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Repo\\RERPAPI.Repo.csproj",
+  "projectFilePath": "D:\\RTechERP\\RERP_BACKEND\\RERPAPI.Repo\\RERPAPI.Repo.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Win\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Win\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI\\RERPAPI.csproj": {}
+    "D:\\RTechERP\\RERP_BACKEND\\RERPAPI\\RERPAPI.csproj": {}
   },
   "projects": {
-    "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.IRepo\\RERPAPI.IRepo.csproj": {
+    "D:\\RTechERP\\RERP_BACKEND\\RERPAPI.IRepo\\RERPAPI.IRepo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.IRepo\\RERPAPI.IRepo.csproj",
+        "projectUniqueName": "D:\\RTechERP\\RERP_BACKEND\\RERPAPI.IRepo\\RERPAPI.IRepo.csproj",
         "projectName": "RERPAPI.IRepo",
-        "projectPath": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.IRepo\\RERPAPI.IRepo.csproj",
+        "projectPath": "D:\\RTechERP\\RERP_BACKEND\\RERPAPI.IRepo\\RERPAPI.IRepo.csproj",
         "packagesPath": "C:\\Users\\Win\\.nuget\\packages\\",
-        "outputPath": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.IRepo\\obj\\",
+        "outputPath": "D:\\RTechERP\\RERP_BACKEND\\RERPAPI.IRepo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\DevExpress 24.2\\Components\\Offline Packages",
@@ -72,14 +72,14 @@
         }
       }
     },
-    "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Model\\RERPAPI.Model.csproj": {
+    "D:\\RTechERP\\RERP_BACKEND\\RERPAPI.Model\\RERPAPI.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Model\\RERPAPI.Model.csproj",
+        "projectUniqueName": "D:\\RTechERP\\RERP_BACKEND\\RERPAPI.Model\\RERPAPI.Model.csproj",
         "projectName": "RERPAPI.Model",
-        "projectPath": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Model\\RERPAPI.Model.csproj",
+        "projectPath": "D:\\RTechERP\\RERP_BACKEND\\RERPAPI.Model\\RERPAPI.Model.csproj",
         "packagesPath": "C:\\Users\\Win\\.nuget\\packages\\",
-        "outputPath": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Model\\obj\\",
+        "outputPath": "D:\\RTechERP\\RERP_BACKEND\\RERPAPI.Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\DevExpress 24.2\\Components\\Offline Packages",
@@ -156,14 +156,14 @@
         }
       }
     },
-    "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Repo\\RERPAPI.Repo.csproj": {
+    "D:\\RTechERP\\RERP_BACKEND\\RERPAPI.Repo\\RERPAPI.Repo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Repo\\RERPAPI.Repo.csproj",
+        "projectUniqueName": "D:\\RTechERP\\RERP_BACKEND\\RERPAPI.Repo\\RERPAPI.Repo.csproj",
         "projectName": "RERPAPI.Repo",
-        "projectPath": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Repo\\RERPAPI.Repo.csproj",
+        "projectPath": "D:\\RTechERP\\RERP_BACKEND\\RERPAPI.Repo\\RERPAPI.Repo.csproj",
         "packagesPath": "C:\\Users\\Win\\.nuget\\packages\\",
-        "outputPath": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Repo\\obj\\",
+        "outputPath": "D:\\RTechERP\\RERP_BACKEND\\RERPAPI.Repo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\DevExpress 24.2\\Components\\Offline Packages",
@@ -187,11 +187,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.IRepo\\RERPAPI.IRepo.csproj": {
-                "projectPath": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.IRepo\\RERPAPI.IRepo.csproj"
+              "D:\\RTechERP\\RERP_BACKEND\\RERPAPI.IRepo\\RERPAPI.IRepo.csproj": {
+                "projectPath": "D:\\RTechERP\\RERP_BACKEND\\RERPAPI.IRepo\\RERPAPI.IRepo.csproj"
               },
-              "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Model\\RERPAPI.Model.csproj": {
-                "projectPath": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Model\\RERPAPI.Model.csproj"
+              "D:\\RTechERP\\RERP_BACKEND\\RERPAPI.Model\\RERPAPI.Model.csproj": {
+                "projectPath": "D:\\RTechERP\\RERP_BACKEND\\RERPAPI.Model\\RERPAPI.Model.csproj"
               }
             }
           }
@@ -231,14 +231,14 @@
         }
       }
     },
-    "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI\\RERPAPI.csproj": {
+    "D:\\RTechERP\\RERP_BACKEND\\RERPAPI\\RERPAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI\\RERPAPI.csproj",
+        "projectUniqueName": "D:\\RTechERP\\RERP_BACKEND\\RERPAPI\\RERPAPI.csproj",
         "projectName": "RERPAPI",
-        "projectPath": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI\\RERPAPI.csproj",
+        "projectPath": "D:\\RTechERP\\RERP_BACKEND\\RERPAPI\\RERPAPI.csproj",
         "packagesPath": "C:\\Users\\Win\\.nuget\\packages\\",
-        "outputPath": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI\\obj\\",
+        "outputPath": "D:\\RTechERP\\RERP_BACKEND\\RERPAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\DevExpress 24.2\\Components\\Offline Packages",
@@ -262,11 +262,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Model\\RERPAPI.Model.csproj": {
-                "projectPath": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Model\\RERPAPI.Model.csproj"
+              "D:\\RTechERP\\RERP_BACKEND\\RERPAPI.Model\\RERPAPI.Model.csproj": {
+                "projectPath": "D:\\RTechERP\\RERP_BACKEND\\RERPAPI.Model\\RERPAPI.Model.csproj"
               },
-              "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Repo\\RERPAPI.Repo.csproj": {
-                "projectPath": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Repo\\RERPAPI.Repo.csproj"
+              "D:\\RTechERP\\RERP_BACKEND\\RERPAPI.Repo\\RERPAPI.Repo.csproj": {
+                "projectPath": "D:\\RTechERP\\RERP_BACKEND\\RERPAPI.Repo\\RERPAPI.Repo.csproj"
               }
             }
           }

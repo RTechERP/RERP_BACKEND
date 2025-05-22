@@ -4023,11 +4023,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Model\\RERPAPI.Model.csproj",
+      "projectUniqueName": "D:\\RTechERP\\RERP_BACKEND\\RERPAPI.Model\\RERPAPI.Model.csproj",
       "projectName": "RERPAPI.Model",
-      "projectPath": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Model\\RERPAPI.Model.csproj",
+      "projectPath": "D:\\RTechERP\\RERP_BACKEND\\RERPAPI.Model\\RERPAPI.Model.csproj",
       "packagesPath": "C:\\Users\\Win\\.nuget\\packages\\",
-      "outputPath": "D:\\RERP_RTC_Web\\BackEnd\\RERPAPI.Model\\obj\\",
+      "outputPath": "D:\\RTechERP\\RERP_BACKEND\\RERPAPI.Model\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\DevExpress 24.2\\Components\\Offline Packages",

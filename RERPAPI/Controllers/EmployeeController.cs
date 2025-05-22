@@ -38,13 +38,13 @@ namespace RERPAPI.Controllers
             }
         }
 
-        [HttpGet("getemployees")]
+       [HttpGet("getemployees")]
         public IActionResult GetEmployee(int status, int departmentID,string keyword)
         {
             try
             {
                 keyword = string.IsNullOrWhiteSpace(keyword) ? "" : keyword;
-                List<EmployeeDTO> employees = SQLHelper<EmployeeDTO>.ProcedureToList("spGetEmployee", 
+               var employees = SQLHelper<EmployeeDTO>.ProcedureToList("spGetEmployee", 
                                                                                     new string[] { "@Status", "@DepartmentID", "@Keyword" }, 
                                                                                     new object[] { status, departmentID, keyword });
                 return Ok(new
@@ -68,7 +68,7 @@ namespace RERPAPI.Controllers
         {
             try
             {
-                List<GetEmployeeDto> employee = SQLHelper<GetEmployeeDto>.ProcedureToList("GetAllEmployeesWithDetails",
+                var employee = SQLHelper<GetEmployeeDto>.ProcedureToList("GetAllEmployeesWithDetails",
                     new string[] {},new object[] {});
 
                 return Ok(new
