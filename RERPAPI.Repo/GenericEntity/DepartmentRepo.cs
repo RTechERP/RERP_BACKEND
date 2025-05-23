@@ -7,11 +7,7 @@ using System.Threading.Tasks;
 
 namespace RERPAPI.Repo.GenericEntity
 {
-    public class EmployeeRepo:GenericRepo<Employee>
+    public class DepartmentRepo:GenericRepo<Department>
     {
-        //public string GenerateAllocationCodeAsset()
-        //{
-
-        //}
     }
 }
