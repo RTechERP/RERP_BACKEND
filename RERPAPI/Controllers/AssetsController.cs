@@ -395,7 +395,7 @@
 
      
         [HttpPost("savedata")]
-            public async Task<IActionResult> SaveEmployee([FromBody] TSAssetManagement asset)
+            public async Task<IActionResult> SaveAssets([FromBody] TSAssetManagement asset)
             {
                 try
                 {
