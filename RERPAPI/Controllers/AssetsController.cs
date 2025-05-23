@@ -16,12 +16,7 @@
         [ApiController]
         public class AssetsController : ControllerBase
         {
-            private readonly RTCContext _context;
-        RTCContext db = new RTCContext();
-        public AssetsController(RTCContext context)
-            {
-                _context = context;
-            }
+       
             TSLostReportAssetRepo tslostreport = new TSLostReportAssetRepo();
              TSAllocationEvictionAssetRepo tSAllocationEvictionrepo = new TSAllocationEvictionAssetRepo();
            TSReportBrokenAssetRepo reportrepo = new TSReportBrokenAssetRepo();
@@ -92,8 +87,7 @@
                 string tb = "";
                 foreach (var id in dto.IDs)
                 {
-                  
-                    var item = db.TSAssetAllocations.FirstOrDefault(a => a.ID == id);
+                    var item = tSAssetAllocationRepo.GetByID(id);
                     if (item == null)
                         continue;
                     bool updated = false;
@@ -163,16 +157,16 @@
                     }
                     if (updated)
                     {
-                        db.TSAssetAllocations.Update(item);
+                       tSAssetAllocationRepo.Update(item);
                         updatedCount++;
                     }
                     if (updatedCount == 0)
                     {
                         return Ok(new { status = 0, tb  });
                     }
-                    db.TSAssetAllocations.Update(item);
+                    await tSAssetAllocationRepo.UpdateAsync(item);
                 }
-                await db.SaveChangesAsync();
+             
                 return Ok(new { status = 1, message = $"{updatedCount} bản ghi đã được cập nhật." });
             }
             catch (Exception ex)
@@ -660,15 +654,16 @@
 
             foreach (var ID in ids)
             {
-                var item = await db.TSAssetAllocations.FindAsync(ID);
+                var item =  tSAssetAllocationRepo.GetByID(ID);
                 if (item != null)
                 {
-                    item.IsDeleted = true; 
-                    db.TSAssetAllocations.Update(item);
+                    item.IsDeleted = true;
+                    tSAssetAllocationRepo.Update(item);
                 }
+                await tSAssetAllocationRepo.UpdateAsync(item);
             }
 
-            await db.SaveChangesAsync();
+          
             return Ok(new { message = "Đã xóa thành công." });
         }
         [HttpPost("deleteAssetManagement")]
@@ -679,15 +674,16 @@
 
             foreach (var ID in ids)
             {
-                var item = await db.TSAssetManagements.FindAsync(ID);
+                var item =  tasset.GetByID(ID);
                 if (item != null)
                 {
                     item.IsDeleted = true;
-                    db.TSAssetManagements.Update(item);
+                    tasset.Update(item);
                 }
+                await tasset.UpdateAsync(item);
             }
 
-            await db.SaveChangesAsync();
+           
             return Ok(new { message = "Đã xóa thành công." });
         }
         [HttpDelete("{id}")]
