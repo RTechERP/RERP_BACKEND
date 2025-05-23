@@ -27,21 +27,21 @@
            TSReportBrokenAssetRepo reportrepo = new TSReportBrokenAssetRepo();
             TSStatusAssetRepo tSStatusAssetRepo = new TSStatusAssetRepo();
             TTypeAssetsRepo typerepo = new TTypeAssetsRepo();
-            TSAssetManagementRepo tasset = new TSAssetManagementRepo();
+        
+           TSAssetManagementRepo tasset = new TSAssetManagementRepo();
             TSSourceAssetsRepo tssourcerepo = new TSSourceAssetsRepo();
             TSAssetAllocationRepo tSAssetAllocationRepo = new TSAssetAllocationRepo();
-            TSAssetManagementRepo tSAssetManagementRepo = new TSAssetManagementRepo();
+       
             TSAssetAllocationDetailRepo tSAssetAllocationDetailRepo = new TSAssetAllocationDetailRepo();
             [HttpGet("getallassetsmanagement")]
             public IActionResult GetAllAsset()
             {
                 try
                 {
-                    List<TSAssetManagement> tSAssetManagements = tSAssetManagementRepo.GetAll();
+                    List<TSAssetManagement> tSAssetManagements = tasset.GetAll();
                     var maxSTT = tSAssetManagements
                               .Where(x => x.STT.HasValue)
                               .Max(x => x.STT);
-
                     return Ok(new
                     {
                   
@@ -58,7 +58,6 @@
                         error = ex.ToString()
                     });
                 }
-
             }
             [HttpGet("getall")]
             public IActionResult GetAll()
@@ -82,151 +81,99 @@
                 }
             
             }
-        [HttpPost("HRApproved")]
-        public async Task<IActionResult> HRApproved([FromBody] List<int> ids)
+        [HttpPost("UpdateApprovalStatus")]
+        public async Task<IActionResult> UpdateApprovalStatus([FromBody] ApproveActionDto dto)
         {
             try
             {
-                if (ids == null || ids.Count == 0)
+                if (dto.IDs == null || dto.IDs.Count == 0)
                     return BadRequest("Danh sách ID không hợp lệ.");
-
-                foreach (var id in ids)
+                int updatedCount = 0;
+                string tb = "";
+                foreach (var id in dto.IDs)
                 {
-                    var item = (from a in db.TSAssetAllocations
-                                where a.ID == id
-                                && a.Status == 0
-                                && a.IsApprovedPersonalProperty == true
-                                select a).ToList().FirstOrDefault();
-                    if (item != null)
+                  
+                    var item = db.TSAssetAllocations.FirstOrDefault(a => a.ID == id);
+                    if (item == null)
+                        continue;
+                    bool updated = false;
+                    switch (dto.Action)
                     {
-                        item.Status = 1;
-                        item.DateApprovedHR = DateTime.Now;
-                        db.TSAssetAllocations.Update(item); // Cập nhật lại mục
+                        case "HR_APPROVE":
+                            if(item.IsApprovedPersonalProperty==false||item.IsApprovedPersonalProperty==null)
+                            {
+                                return Ok(new
+                                {
+                                    status = 0,
+                                    tb = $"Biên bản số {id} chưa được cá nhân duyệt"
+
+                                });
+                            }    
+                            if (item.Status == 0 && item.IsApproveAccountant == true)
+                            {
+                                item.Status = 1;
+                                item.DateApprovedHR = DateTime.Now;
+                                updated = true;
+                            }
+                            break;
+                        case "HR_CANCEL":
+                            if (item.IsApproveAccountant == true)
+                            {
+                                return Ok(new
+                                {
+                                    status = 0,
+                                    tb = $"Biên bản số {id} không thể hủy duyệt khi kế toán đã duyệt"
+
+                                });
+                            }
+                            if (item.Status == 1 && item.IsApproveAccountant == false)
+                            {
+                                item.Status = 0;
+                                item.DateApprovedHR = DateTime.Now;
+                                  updated = true;
+                            }
+                            break;
+                        case "ACCOUNTANT_APPROVE":
+                            if (item.IsApprovedPersonalProperty == false||item.Status==0)
+                            {
+                                return Ok(new
+                                {
+                                    status = 0,
+                                   tb = $"Biên bản số {id} chưa được cá nhân và nhân sự duyệt"
+
+                                });
+                            }
+                            if ( item.IsApproveAccountant == false||item.IsApproveAccountant==null)
+                            {
+                                item.IsApproveAccountant = true;
+                                item.DateApproveAccountant = DateTime.Now;
+                                updated = true;
+                            }
+                            break;
+                        case "ACCOUNTANT_CANCEL":
+                            if ( item.IsApproveAccountant == true)
+                            {
+                                item.IsApproveAccountant = false;
+                                item.DateApproveAccountant = DateTime.Now;
+                                updated = true;
+                            }
+                            break;
+                        default:
+                            return BadRequest("Hành động không hợp lệ.");
                     }
-                }
-                await db.SaveChangesAsync();
-                return Ok(new
-                {
-                    status = 1,
-
-                });
-            }
-            catch (Exception ex)
-            {
-                return Ok(new
-                {
-                    status = 0,
-                    message = ex.Message,
-                    error = ex.ToString()
-                });
-            }
-        }
-        [HttpPost("HRCancelApproved")]
-        public async Task<IActionResult> HRCancelApproved([FromBody] List<int> ids)
-        {
-            try
-            {
-                if (ids == null || ids.Count == 0)
-                    return BadRequest("Danh sách ID không hợp lệ.");
-
-                foreach (var id in ids)
-                {
-                    var item = (from a in db.TSAssetAllocations
-                                where a.ID == id
-                                && a.Status == 1
-                                && a.IsApprovedPersonalProperty == false
-                                select a).ToList().FirstOrDefault();
-                    if (item != null)
+                    if (updated)
                     {
-                        item.Status = 0;
-                        item.DateApprovedHR = DateTime.Now;
-                        db.TSAssetAllocations.Update(item); 
-                    }
-                }
-                await db.SaveChangesAsync();
-                return Ok(new
-                {
-                    status = 1,
-
-                });
-            }   
-            catch (Exception ex)
-            {
-                return Ok(new
-                {
-                    status = 0,
-                    message = ex.Message,
-                    error = ex.ToString()
-                });
-            }
-        }
-        [HttpPost("AccountantApproved")]
-        public async Task<IActionResult> AccountantApproved([FromBody] List<int> ids)
-        {
-            try
-            {
-                if (ids == null || ids.Count == 0)
-                    return BadRequest("Danh sách ID không hợp lệ.");
-
-                foreach (var id in ids)
-                {
-                    var item = (from a in db.TSAssetAllocations
-                                where a.ID == id
-                                && a.Status == 1
-                                && a.IsApproveAccountant == false
-                                select a).ToList().FirstOrDefault();
-                    if (item != null)
-                    {
-                        item.IsApproveAccountant = true;
-                        item.DateApproveAccountant = DateTime.Now;
                         db.TSAssetAllocations.Update(item);
+                        updatedCount++;
                     }
-                }
-                await db.SaveChangesAsync();
-                return Ok(new
-                {
-                    status = 1,
-
-                });
-            }
-            catch (Exception ex)
-            {
-                return Ok(new
-                {
-                    status = 0,
-                    message = ex.Message,
-                    error = ex.ToString()
-                });
-            }
-        }
-        [HttpPost("AccountantCancelApproved")]
-        public async Task<IActionResult> AccountantCancelApproved([FromBody] List<int> ids)
-        {
-            try
-            {
-                if (ids == null || ids.Count == 0)
-                    return BadRequest("Danh sách ID không hợp lệ.");
-
-                foreach (var id in ids)
-                {
-                    var item = (from a in db.TSAssetAllocations
-                                where a.ID == id
-                                && a.Status == 1
-                                && a.IsApproveAccountant == true
-                                select a).ToList().FirstOrDefault();
-                    if (item != null)
+                    if (updatedCount == 0)
                     {
-                        item.IsApproveAccountant = false;
-                        item.DateApproveAccountant = DateTime.Now;
-                        db.TSAssetAllocations.Update(item);
+                        return Ok(new { status = 0, tb  });
                     }
+                    db.TSAssetAllocations.Update(item);
                 }
                 await db.SaveChangesAsync();
-                return Ok(new
-                {
-                    status = 1,
-
-                });
+                return Ok(new { status = 1, message = $"{updatedCount} bản ghi đã được cập nhật." });
             }
             catch (Exception ex)
             {
@@ -259,7 +206,6 @@
                         error = ex.ToString()
                     });
                 }
-
             }
             [HttpGet("getstatus")]
             public IActionResult GetStatus()
@@ -282,7 +228,6 @@
                         error = ex.ToString()
                     });
                 }
-
             }
         
             [HttpGet("getassets")]
@@ -290,26 +235,16 @@
             {
                 try
                 {
-      
                     DateTime minDate = new DateTime(2020, 12, 5);
                     DateTime maxDate = new DateTime(2025, 12, 19);
-
-               
                     DateTime dateTimeS = DateStart ?? minDate;
                     DateTime dateTimeE = DateEnd ?? maxDate;
-
-          
                     dateTimeS = new DateTime(dateTimeS.Year, dateTimeS.Month, dateTimeS.Day, 0, 0, 0);
                     dateTimeE = new DateTime(dateTimeE.Year, dateTimeE.Month, dateTimeE.Day, 23, 59, 59);
-
                     var assets = SQLHelper<dynamic>.ProcedureToDynamicLists("spLoadTSAssetManagement",
                         new string[] { "@FilterText", "@PageNumber", "@PageSize", "@DateStart", "@DateEnd", "@Status", "@Department" },
                         new object[] { FilterText, PageNumber, PageSize, dateTimeS, dateTimeE, Status, Department });
-
-                    List<TSAssetManagement> tSAssetManagements = tSAssetManagementRepo.GetAll();
-               
-
-
+                    List<TSAssetManagement> tSAssetManagements = tasset.GetAll();
                     return Ok(new
                     {
                         status = 1,
@@ -336,11 +271,9 @@
                 try
                 {
                     var assetsallocation = SQLHelper<dynamic>.ProcedureToDynamicLists(
-          "spLoadTSAllocationEvictionAsset",
-          new string[] { "@ID" },          // ← đổi đây
-          new object[] { ID }
-      );
-
+                "spLoadTSAllocationEvictionAsset",
+                new string[] { "@ID" },        
+                 new object[] { ID } );
                     return Ok(new
                     {
                         status = 1,
@@ -368,8 +301,8 @@
                 {
                     var assetsallocationdetail = SQLHelper<dynamic>.ProcedureToDynamicLists(
                "spGetTSAssetAllocationDetail",
-               new string[] { "@TSAssetAllocationID" },      // <-- đây
-               new object[] { ID }                           // <-- và đây
+               new string[] { "@TSAssetAllocationID" },    
+               new object[] { ID }                        
            );
 
                     return Ok(new
@@ -392,8 +325,6 @@
                     });
                 }
             }
-
-
             [HttpGet("gettype")]
             public IActionResult GetType()
             {
@@ -417,45 +348,59 @@
                 }
 
             }
-            [HttpGet("getTSAssestAllocation")]
-            public IActionResult GetTSAssetAllocation(
-          DateTime? dateStart = null,
-          DateTime? dateEnd = null,
-          int? employeeID = null,
-          string? status = null,
-          string? filterText = null,
-          int pageSize = 10,
-          int pageNumber = 1)
+        [HttpGet("getTSAssestAllocation")]
+        public async Task<IActionResult> GetTSAssetAllocation(
+                             DateTime? dateStart = null,
+                             DateTime? dateEnd = null,
+                             int? employeeID = null,
+                             string? status = null,
+                             string? filterText = null,
+                             int pageSize = 10,
+                             int pageNumber = 1)
+        {
+            try
             {
-                try
-                {
-                    // Nếu filterText = null, bạn có thể truyền DBNull.Value hoặc string.Empty tuỳ SP xử lý
-                    var assetallocation = SQLHelper<dynamic>.ProcedureToDynamicLists(
-                        "spGetTSAssetAllocation",
-                        new string[] { "@DateStart", "@DateEnd", "@EmployeeID", "@Status", "@FilterText", "@PageSize", "@PageNumber" },
-                        new object[] { dateStart,   dateEnd,      employeeID,      status,
-                               filterText ?? string.Empty,
-                               pageSize,      pageNumber });
+                // Gọi stored procedure như cũ
+                var assetallocation = SQLHelper<dynamic>.ProcedureToDynamicLists(
+                    "spGetTSAssetAllocation",
+                    new string[] { "@DateStart", "@DateEnd", "@EmployeeID", "@Status", "@FilterText", "@PageSize", "@PageNumber" },
+                    new object[] {
+                dateStart,
+                dateEnd,
+                employeeID,
+                status,
+                filterText ?? string.Empty,
+                pageSize,
+                pageNumber
+                    });
 
-                    return Ok(new
-                    {
-                        status = 1,
-                        data = new { assetallocation = assetallocation[0] }
-                    });
-                }
-                catch (Exception ex)
+                // Gọi hàm sinh mã
+                var assetDate = dateStart ?? DateTime.Now; // Hoặc truyền ngày bạn muốn
+              
+
+                return Ok(new
                 {
-                    return Ok(new
+                    status = 1,
+                    data = new
                     {
-                        status = 0,
-                        message = ex.Message,
-                        error = ex.ToString()
-                    });
-                }
+                        assetallocation = assetallocation[0],
+                       
+                    }
+                });
             }
+            catch (Exception ex)
+            {
+                return Ok(new
+                {
+                    status = 0,
+                    message = ex.Message,
+                    error = ex.ToString()
+                });
+            }
+        }
 
-        
-            [HttpPost("savedata")]
+     
+        [HttpPost("savedata")]
             public async Task<IActionResult> SaveEmployee([FromBody] TSAssetManagement asset)
             {
                 try
@@ -547,27 +492,19 @@
             {
                 try
                 {
-                    // Lấy ChucVuID từ DB nếu không truyền từ client
                     int? chucVuId = 30;
-
-
-                    // 1. Cập nhật TSAssetManagement
                     var assetmanagementData = tasset.GetByID(dto.AssetManagementID) ?? new TSAssetManagement();
                     assetmanagementData.ID = dto.AssetManagementID;
                     assetmanagementData.Note = dto.Note;
                     assetmanagementData.Status = dto.AssetStatus;
                     assetmanagementData.StatusID = dto.AssetStatusID;
- 
                     assetmanagementData.UpdatedDate = dto.UpdatedDate;
                     assetmanagementData.UpdatedBy=dto.UpdatedBy;
                     if (assetmanagementData.ID > 0)
                         await tasset.UpdateAsync(assetmanagementData);
                     else
                         await tasset.CreateAsync(assetmanagementData);
-
-
                     var reportlostdata = new TSLostReportAsset
-
                     {
                              AssetManagementID  = dto.AssetManagementID,
                              DateLostReport =dto.DateLostReport,
@@ -578,9 +515,7 @@
                         UpdatedBy = dto.UpdatedBy
 
                     };
-                    await tslostreport.CreateAsync(reportlostdata);
-
-                    // 3. Thêm  
+                    await tslostreport.CreateAsync(reportlostdata); 
                     var allocationevictionasset = new TSAllocationEvictionAsset
                     {
                         AssetManagementID = dto.AssetManagementID,
@@ -594,10 +529,8 @@
                         CreatedBy=dto.CreatedBy,
                         UpdatedDate= dto.UpdatedDate,
                         UpdatedBy=dto.UpdatedBy
-
                     };
                     await tSAllocationEvictionrepo.CreateAsync(allocationevictionasset);
-
                     return Ok(new
                     {
                         status = 1,
@@ -613,8 +546,7 @@
                 {
                     return Ok(new { status = 0, message = ex.Message });
                 }
-            }
-
+            }   
         [HttpPost("SaveAllocation")]
         public async Task<IActionResult> SaveAllocation([FromBody] TSAssetAllocationFullDTO dto)
         {
@@ -692,36 +624,22 @@
                 return Ok(new { status = 0, message = ex.Message });
             }
         }
-       
+
+
         [HttpGet("generate-allocation-code")]
         public async Task<IActionResult> GenerateAllocationCode([FromQuery] DateTime? allocationDate)
         {
             if (allocationDate == null)
                 return BadRequest("allocationDate is required.");
 
-            var date = allocationDate.Value.Date;
+            string newcode = tSAssetAllocationRepo.GenerateAllocationCode(allocationDate);
 
-
-            var latestCode = await _context.TSAssetAllocations
-                .Where(x => x.DateAllocation.HasValue &&
-                            x.DateAllocation.Value.Date == date &&
-                            !string.IsNullOrEmpty(x.Code))
-                .OrderByDescending(x => x.ID)
-                .Select(x => x.Code)
-                .FirstOrDefaultAsync();
-
-            string baseCode = $"TSCP{date:ddMMyyyy}";
-            string code = string.IsNullOrEmpty(latestCode) ? $"{baseCode}00000" : latestCode;
-
-            string numberPart = code.Substring(code.Length - 5);
-            int nextNumber = int.TryParse(numberPart, out int num) ? num + 1 : 1;
-
-            string numberStr = nextNumber.ToString("D5");
-            string newCode = $"{baseCode}{numberStr}";
-
-            return Ok(newCode);
+            return Ok(new
+            {
+                status = 1,
+                data = newcode
+            });
         }
-
 
         [HttpGet("generate-allocation-code-asset")]
         public async Task<IActionResult> GenerateAllocationCodeAsset([FromQuery] DateTime? assetdate)
@@ -729,29 +647,9 @@
             if (assetdate == null)
                 return BadRequest("allocationDate is required.");
 
-            var date = assetdate.Value.Date;
-            var startDate = date;
-            var endDate = date.AddDays(1);
+            string newcode = tasset.GenerateAllocationCodeAsset(assetdate); 
 
-            var latestCode = await _context.TSAssetManagements
-                .Where(x => x.CreatedDate.HasValue &&
-                            x.CreatedDate >= startDate &&
-                            x.CreatedDate < endDate &&
-                            !string.IsNullOrEmpty(x.TSAssetCode))
-                .OrderByDescending(x => x.ID)
-                .Select(x => x.TSAssetCode)
-                .FirstOrDefaultAsync();
-
-            string baseCode = $"TS{date:ddMMyyyy}";
-            string code = string.IsNullOrEmpty(latestCode) ? $"{baseCode}00000" : latestCode;
-
-            string numberPart = code.Substring(code.Length - 5);
-            int nextNumber = int.TryParse(numberPart, out int num) ? num + 1 : 1;
-
-            string numberStr = nextNumber.ToString("D5");
-            string newCode = $"{baseCode}{numberStr}";
-
-            return Ok(newCode);
+            return Ok(newcode);
         }
 
         [HttpPost("deleteAssetAllocation")]
@@ -830,4 +728,3 @@
 
         }
     }
-dffgngcdhmm
