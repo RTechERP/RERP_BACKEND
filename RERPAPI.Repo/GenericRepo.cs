@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using RERPAPI.IRepo;
 using RERPAPI.Model.Context;
-using RERPAPI.Model.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,7 +29,7 @@ namespace RERPAPI.Repo
         {
             try
             {
-                return table.ToList() ?? new List<T>();
+                return table.ToList();
             }
             catch (Exception ex)
             {
@@ -39,7 +38,7 @@ namespace RERPAPI.Repo
             }
         }
 
-        public T GetByID(long id)
+        public T GetByID(int id)
         {
             try
             {
@@ -96,7 +95,7 @@ namespace RERPAPI.Repo
             }
         }
 
-        public int Delete(long id)
+        public int Delete(int id)
         {
             try
             {
@@ -193,60 +192,6 @@ namespace RERPAPI.Repo
             catch (Exception ex)
             {
                 throw new Exception(ex.ToString());
-            }
-        }
-
-        public int UpdateFieldsByID(int ID, T item)
-        {
-            try
-            {
-                var fieldValues = new Dictionary<string, object>();
-
-
-                var properties = typeof(T).GetProperties();
-                foreach (var prop in properties)
-                {
-                    // Bỏ qua thuộc tính ID hoặc các thuộc tính không cần cập nhật
-                    if (prop.Name != "ID" && prop.CanRead)
-                    {
-                        var value = prop.GetValue(item);
-                        if (value != null) // Chỉ thêm nếu giá trị không null
-                        {
-                            fieldValues.Add(prop.Name, value);
-                        }
-                    }
-                }
-
-                // Tìm entity theo ID
-                var entity = db.Set<T>().Find(ID);
-                if (entity == null)
-                {
-                    throw new Exception($"Entity with ID {ID} not found.");
-                }
-
-                // Lấy type của entity
-                Type type = typeof(T);
-
-                // Cập nhật các trường động
-                foreach (var field in fieldValues)
-                {
-                    // Kiểm tra thuộc tính
-                    var property = type.GetProperty(field.Key);
-                    if (property == null || !property.CanWrite)
-                    {
-                        throw new Exception($"Property {field.Key} not found or is not writable.");
-                    }
-
-                    // Gán giá trị cho thuộc tính (xử lý null)
-                    property.SetValue(entity, field.Value == null ? null : field.Value);
-                }
-
-                // Lưu thay đổi vào cơ sở dữ liệu
-                return db.SaveChanges();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception($"Error updating entity: {ex.Message}", ex);
             }
         }
     }
