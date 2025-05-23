@@ -11,7 +11,8 @@ namespace RERPAPI.Controllers
     [ApiController]
     public class EmployeeController : ControllerBase
     {
-        EmployeeRepo employeeRepo = new EmployeeRepo();
+        OfficeSupplyRePo employeeRepo = new OfficeSupplyRePo();
+      
 
         [HttpGet("getall")]
         public IActionResult GetAll()
@@ -35,9 +36,9 @@ namespace RERPAPI.Controllers
                 });
             }
         }
-
+        
         [HttpGet("getemployees")]
-        public IActionResult GetEmployee(int status, int departmentID,string keyword)
+        public IActionResult GetEmployee(int status, int departmentID,string? keyword)
         {
             try
             {
@@ -90,7 +91,10 @@ namespace RERPAPI.Controllers
         {
             try
             {
-                if (employee.ID <= 0) await employeeRepo.CreateAsync(employee);
+                if (employee.ID <= 0)
+                {                  
+                    await employeeRepo.CreateAsync(employee);
+                } 
                 else await employeeRepo.UpdateAsync(employee);
 
                 return Ok(new
@@ -101,6 +105,7 @@ namespace RERPAPI.Controllers
             }
             catch (Exception ex)
             {
+                
                 return BadRequest(new
                 {
                     status = 0,
