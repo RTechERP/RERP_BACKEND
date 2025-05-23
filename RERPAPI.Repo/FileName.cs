@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using RERPAPI.Model.Entities;
 
-namespace RERPAPI.Repo.GenericEntity
+namespace RERPAPI.Repo
 {
-    public class TAssetManagementRepo:GenericRepo<TSAssetManagement>
+    internal class FileName
     {
     }
 }
