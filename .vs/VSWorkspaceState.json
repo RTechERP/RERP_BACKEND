@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\.github",
+    "\\RERPAPI",
+    "\\RERPAPI.IRepo",
+    "\\RERPAPI.Model",
+    "\\RERPAPI.Model\\Entities",
+    "\\RERPAPI.Repo",
+    "\\RERPAPI\\Controllers"
+  ],
+  "SelectedNode": "\\RERPAPI\\Controllers\\AssetsController.cs",
+  "PreviewInSolutionExplorer": false
+}
