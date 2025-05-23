@@ -30,6 +30,7 @@ namespace RERPAPI.Repo.GenericEntity
 
             return newCode;
         }
-        public string test { get; set; }
+        public string test { get; set; }    
+        public string test2 { get; set; }
     }
 }

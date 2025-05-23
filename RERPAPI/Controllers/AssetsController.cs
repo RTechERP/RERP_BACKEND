@@ -542,7 +542,7 @@
                 }
             }   
         [HttpPost("SaveAllocation")]
-        public async Task<IActionResult> SaveAllocation([FromBody] TSAssetAllocationFullDTO dto)
+        public async Task<IActionResult> SaveAllocationn([FromBody] TSAssetAllocationFullDTO dto)
         {
             try
             {
