@@ -14,17 +14,29 @@ namespace RERPAPI.Controllers
         RTCContext db = new RTCContext();
         OfficeSupplyRequestsRepo officesupplyrequests = new OfficeSupplyRequestsRepo();
 
-        [HttpGet("GetdataDepartment")]
+        [HttpGet("getdatadepartment")]
         public IActionResult GetdataDepartment()
         {
-            List<Department> departmentList = SQLHelper<Department>.FindAll().OrderBy(x => x.STT).ToList();
-            return Ok(new
+            try
             {
-                status = 0,
-                data = departmentList
-            });
+                List<Department> departmentList = SQLHelper<Department>.FindAll().OrderBy(x => x.STT).ToList();
+                return Ok(new
+                {
+                    status = 1,
+                    data = departmentList
+                });
+            }
+            catch (Exception ex)
+            {
+                return Ok(new
+                {
+                    status = 0,
+                    message = ex.Message,
+                    error = ex.ToString()
+                });
+            }      
         }
-        [HttpGet("GetOfficeSupplyRequestsDetail")]
+        [HttpGet("getofficesupplyrequestsdetail")]
         public IActionResult GetOfficeSupplyRequestsDetail(int OfficeSupplyRequestsID)
         {
             try
@@ -53,7 +65,7 @@ namespace RERPAPI.Controllers
             }
         }
 
-        [HttpPost("AdminApproved")]
+        [HttpPost("adminapproved")]
         public async Task<IActionResult> AdminApproved([FromBody] List<int> ids)
         {
             try
@@ -91,7 +103,7 @@ namespace RERPAPI.Controllers
             }
         }
 
-        [HttpPost("UnAdminApproved")]
+        [HttpPost("unadminapproved")]
         public async Task<IActionResult> UnAdminApproved([FromBody] List<int> ids)
         {
             try
@@ -126,7 +138,7 @@ namespace RERPAPI.Controllers
 
         }
 
-        [HttpPost("IsApproved")]
+        [HttpPost("isapproved")]
         public async Task<IActionResult> IsApproved([FromBody] List<int> ids)
         {
             try
@@ -158,7 +170,7 @@ namespace RERPAPI.Controllers
                 });
             }
         }
-        [HttpPost("UnIsApproved")]
+        [HttpPost("unisapproved")]
         public async Task<IActionResult> UnIsApproved([FromBody] List<int> ids)
         {
             try
@@ -192,7 +204,7 @@ namespace RERPAPI.Controllers
         }
 
 
-        [HttpGet("GetOfficeSupplyRequests")]
+        [HttpGet("getofficesupplyrequests")]
         public IActionResult GetOfficeSupplyRequests(string? keyword, int? employeeID, int? departmentID, DateTime? monthInput)
         {
             try

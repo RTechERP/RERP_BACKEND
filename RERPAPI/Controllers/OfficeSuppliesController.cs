@@ -1,13 +1,10 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using NuGet.Packaging.Signing;
 using RERPAPI.Model.Common;
 using RERPAPI.Model.Context;
 using RERPAPI.Model.DTO;
 using RERPAPI.Model.Entities;
 using RERPAPI.Repo.GenericEntity;
-using static Microsoft.Extensions.Logging.EventSource.LoggingEventSource;
 
 namespace RERPAPI.Controllers
 {
@@ -26,7 +23,7 @@ namespace RERPAPI.Controllers
             _context = context;
         }
 
-        [HttpGet("getall")]
+        [HttpGet("getdataofficesupplies")]
         public IActionResult GetOfficeSupplies([FromQuery] string keyword = "")
         {
             List<OficeSuppliesDTO> result = SQLHelper<OficeSuppliesDTO>.ProcedureToList(
@@ -42,8 +39,8 @@ namespace RERPAPI.Controllers
             });
         }
 
-        [HttpGet("GetOfficeSupplyUnit")]
-        public IActionResult getunini()
+        [HttpGet("getdataofficesupplyunit")]
+        public IActionResult GetDataOfficeSupplyUnini()
         {
             List<OfficeSupplyUnit> result = SQLHelper<OfficeSupplyUnit>.FindAll();
             var data = result.Where(x => x.IsDeleted == false).ToList();
@@ -52,8 +49,8 @@ namespace RERPAPI.Controllers
             );
         }
      
-        [HttpGet("GetbyIDOfficeSupply")]
-        public IActionResult GetbyIDOfficeSupply(int id)
+        [HttpGet("getbyidofficesupplies")]
+        public IActionResult GetbyIDOfficeSupplies(int id)
         {
             try
             {
@@ -76,7 +73,7 @@ namespace RERPAPI.Controllers
         }
         
 
-        [HttpPost("DeleteOfficeSupply")]
+        [HttpPost("deleteofficesupply")]
         public async Task<IActionResult> DeleteVpp([FromBody] List<int> ids)
         {
             if (ids == null || ids.Count == 0)
@@ -101,27 +98,39 @@ namespace RERPAPI.Controllers
         [Route("next-codeRTC")]
         public async Task<IActionResult> GetNextCodeRTC()
         {
-            var allCodes = await db.OfficeSupplies
-                            .Where(x => x.CodeRTC.StartsWith("VPP"))
-                            .Select(x => x.CodeRTC)
-                            .ToListAsync();
-            int maxNumber = 0;
-            foreach (var code in allCodes)
+            try
             {
-                var numberPart = code.Substring(3);
-                if (int.TryParse(numberPart, out int num))
+                var allCodes = await db.OfficeSupplies
+                           .Where(x => x.CodeRTC.StartsWith("VPP"))
+                           .Select(x => x.CodeRTC)
+                           .ToListAsync();
+                int maxNumber = 0;
+                foreach (var code in allCodes)
                 {
-                    if (num > maxNumber)
-                        maxNumber = num;
+                    var numberPart = code.Substring(3);
+                    if (int.TryParse(numberPart, out int num))
+                    {
+                        if (num > maxNumber)
+                            maxNumber = num;
+                    }
                 }
+                int nextNumber = maxNumber + 1;
+                var nextCodeRTC = "VPP" + nextNumber;
+                return Ok(nextCodeRTC);
             }
-            int nextNumber = maxNumber + 1;
-            var nextCodeRTC = "VPP" + nextNumber;
-            return Ok(nextCodeRTC);
+            catch (Exception ex)
+            {
+                return BadRequest(new
+                {
+                    status = 0,
+                    message = ex.Message,
+                    error = ex.ToString()
+                });
+            }
         }
 
         //cap nhat and them
-        [HttpPost("AddandUpdate")]
+        [HttpPost("addandupdate")]
         public async Task<IActionResult> AddandUpdate([FromBody] OfficeSupply officesupply)
         {
 
@@ -153,7 +162,7 @@ namespace RERPAPI.Controllers
         }
 
         //danh sách tính
-        [HttpPost("savedatas")]
+        [HttpPost("savedatofficesupplyunit")]
         public async Task<IActionResult> SaveDST([FromBody] OfficeSupplyUnit dst)
         {
             try
@@ -182,8 +191,8 @@ namespace RERPAPI.Controllers
                 });
             }
         }
-        [HttpGet("getbyid")]
-        public IActionResult GetByID(int id)
+        [HttpGet("getbyidofficesupplyunit")]
+        public IActionResult GetByIDOfficeSupplyUnit(int id)
         {
             try
             {
@@ -205,7 +214,7 @@ namespace RERPAPI.Controllers
             }
         }
 
-        [HttpPost("DeleteOfficeSupplyUnit")]
+        [HttpPost("deleteofficesupplyunit")]
         public async Task<IActionResult> DeleteOfficeSupplyUnit([FromBody] List<int> ids)
         {
             if (ids == null || ids.Count == 0)

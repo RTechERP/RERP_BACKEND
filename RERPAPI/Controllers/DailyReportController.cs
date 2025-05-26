@@ -11,7 +11,7 @@ namespace RERPAPI.Controllers
     [ApiController]
     public class DailyReportController : ControllerBase
     {
-        [HttpGet("GetDailyReportTechnical")]
+        [HttpGet("getdailyreporttechnical")]
         public IActionResult GetDailyReportTechnical(DateTime dateStart, DateTime dateEnd, string keyword = "", int userID = 0,int departmenID=6)
         {
             try
@@ -41,8 +41,8 @@ namespace RERPAPI.Controllers
         }
 
 
-        [HttpGet("GetdataFilmAndDriver")]
-        public IActionResult GetdataFilm(DateTime dateStart, DateTime dateEnd, string keyword = "", int employeeID = 0)
+        [HttpGet("getdatafilmanddriver")]
+        public IActionResult GetDataFilmanddriver(DateTime dateStart, DateTime dateEnd, string keyword = "", int employeeID = 0)
         {
             try
             {
@@ -75,8 +75,8 @@ namespace RERPAPI.Controllers
 
 
 
-        [HttpGet("GetdataEmployee")]
-        public IActionResult GetdataEmployee(int departmentID=0, int projectID=0)
+        [HttpGet("getdataemployee")]
+        public IActionResult GetDataEmployee(int departmentID=0, int projectID=0)
         {
             try
             {

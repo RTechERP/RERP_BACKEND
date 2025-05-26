@@ -9,18 +9,30 @@ namespace RERPAPI.Controllers
     [ApiController]
     public class OfficeSupplyRequestSummaryController : ControllerBase
     {
-        [HttpGet("GetlistDepartment")]
+        [HttpGet("getlistdepartment")]
         public IActionResult GetlistDepartment()
         {
-            List<Department> departmentList = SQLHelper<Department>.FindAll().OrderBy(x => x.STT).ToList();
-            return Ok(new
+            try
             {
-                status = 0,
-                data = departmentList
-            });
+                List<Department> departmentList = SQLHelper<Department>.FindAll().OrderBy(x => x.STT).ToList();
+                return Ok(new
+                {
+                    status = 1,
+                    data = departmentList
+                });
+            }
+            catch (Exception ex)
+            {
+                return Ok(new
+                {
+                    status = 0,
+                    message = ex.Message,
+                    error = ex.ToString()
+                });
+            }              
         }
 
-        [HttpGet("GetOfficeSupplyRequestSummary")]
+        [HttpGet("getofficeSupplyrequestsummary")]
         public IActionResult GetOfficeSupplyRequestSummary(int year, int month, string? keyword = "", int departmentId = 0)
         {
             try
@@ -33,7 +45,6 @@ namespace RERPAPI.Controllers
                     new string[] { "@DateStart", "@DateEnd", "@Keyword", "@DepartmentID" },
                     new object[] { dateStart, dateEnd, keyword, departmentId }
                 );
-
                 return Ok(new
                 {
                     status = 1,
