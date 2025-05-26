@@ -5,10 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RERPAPI.Repo.GenericEntity
+namespace RERPAPI.Model.DTO
 {
-    public class OfficeSupplyRePo:GenericRepo<Employee>
+    public class OfficeSupplyUnitDTO: OfficeSupplyUnit
     {
+        public int ID { get; set; }
 
+        public string Name { get; set; }
     }
 }

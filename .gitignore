@@ -1,0 +1,28 @@
+﻿# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build output
+bin/
+obj/
+*.exe
+*.dll
+*.pdb
+
+# Others
+*.log
+*.bak
+*.cache
+*.db
+
+# VS Code settings
+.vscode/
+# ASP.NET secrets
+secrets.json
+
+# Rider / Resharper / JetBrains IDEs
+.idea/
+*.sln.iml

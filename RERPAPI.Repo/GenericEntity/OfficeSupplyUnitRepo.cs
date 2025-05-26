@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 
 namespace RERPAPI.Repo.GenericEntity
 {
-    public class OfficeSupplyRePo:GenericRepo<Employee>
+    public class OfficeSupplyUnitRepo : GenericRepo<OfficeSupplyUnit>
     {
-
     }
 }
